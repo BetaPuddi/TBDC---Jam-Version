@@ -3457,6 +3457,7 @@ GameObject:
   - component: {fileID: 1447346379}
   - component: {fileID: 1447346381}
   - component: {fileID: 1447346380}
+  - component: {fileID: 1447346382}
   m_Layer: 5
   m_Name: EnemyInfoPanel
   m_TagString: Untagged
@@ -3526,6 +3527,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447346378}
   m_CullTransparentMesh: 1
+--- !u!114 &1447346382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447346378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dcbb04d7af856446aec5ca36c6b0b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEnemy: {fileID: 0}
+  enemyNameText: {fileID: 799937249}
+  enemyHealthText: {fileID: 1972391260}
+  enemyATKText: {fileID: 1949197591}
+  enemyDEFText: {fileID: 1723394969}
 --- !u!1 &1520055069
 GameObject:
   m_ObjectHideFlags: 0

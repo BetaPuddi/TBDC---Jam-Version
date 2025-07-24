@@ -11,6 +11,9 @@ namespace Enemies
         public int attackStat;
         public int defenseStat;
 
+        public delegate void EnemyInfoChange();
+        public static event EnemyInfoChange OnEnemyInfoChange;
+
         private void Awake()
         {
             Reset();
@@ -39,6 +42,8 @@ namespace Enemies
                 print("Enemy dead");
                 Reset();
             }
+
+            OnEnemyInfoChange();
         }
 
         public virtual void Heal(int heal)
@@ -48,11 +53,14 @@ namespace Enemies
             {
                 currentHealth = maxHealth;
             }
+
+            OnEnemyInfoChange();
         }
 
         public void Reset()
         {
             currentHealth = maxHealth;
+            OnEnemyInfoChange();
         }
     }
 }
