@@ -1,25 +1,27 @@
-using System;
-using UnityEngine;
 using LogSystem;
+using UnityEngine;
 
-public class LogManager : MonoBehaviour
+namespace Managers
 {
-    private static LogManager _instance;
-    [SerializeField] private GameObject logPrefab;
-    [SerializeField] private GameObject logPanel;
-
-    private void Awake()
+    public class LogManager : MonoBehaviour
     {
-        if (_instance == null)
+        private static LogManager _instance;
+        [SerializeField] private GameObject logPrefab;
+        [SerializeField] private GameObject logPanel;
+
+        private void Awake()
         {
-            _instance = this;
+            if (_instance == null)
+            {
+                _instance = this;
+            }
         }
-    }
 
-    public void InstantiateLog(string logText)
-    {
-        var newLogPrefab = Instantiate(logPrefab, logPanel.transform);
-        var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
-        newLogEntry.SetLogText(logText);
+        public void InstantiateLog(string logText)
+        {
+            var newLogPrefab = Instantiate(logPrefab, logPanel.transform);
+            var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
+            newLogEntry.SetLogText(logText);
+        }
     }
 }

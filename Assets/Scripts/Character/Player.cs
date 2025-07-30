@@ -1,18 +1,17 @@
-using System;
 using UnityEngine;
 
-namespace Enemies
+namespace Character
 {
-    public class Enemy : MonoBehaviour
+    public class Player : MonoBehaviour
     {
-        public string enemyName;
+        public string playerName;
         public int currentHealth;
         public int maxHealth;
         public int attackStat;
         public int defenseStat;
 
-        public delegate void EnemyInfoChange();
-        public static event EnemyInfoChange OnEnemyInfoChange;
+        public delegate void PlayerInfoChange();
+        public static event PlayerInfoChange OnPlayerInfoChange;
 
         private void Awake()
         {
@@ -21,17 +20,17 @@ namespace Enemies
 
         public virtual void Attack()
         {
-            print("Enemy attack");
+            print("Player attack");
         }
 
         public virtual void Skill_01()
         {
-            print("Enemy skill 01");
+            print("Player skill 01");
         }
 
         public virtual void Skill_02()
         {
-            print("Enemy skill 02");
+            print("Player skill 02");
         }
 
         public virtual void TakeDamage(int damage)
@@ -39,11 +38,11 @@ namespace Enemies
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
-                print("Enemy dead");
+                print("Player dead");
                 Reset();
             }
 
-            OnEnemyInfoChange?.Invoke();
+            OnPlayerInfoChange?.Invoke();
         }
 
         public virtual void Heal(int heal)
@@ -54,13 +53,13 @@ namespace Enemies
                 currentHealth = maxHealth;
             }
 
-            OnEnemyInfoChange?.Invoke();
+            OnPlayerInfoChange?.Invoke();
         }
 
         public void Reset()
         {
             currentHealth = maxHealth;
-            OnEnemyInfoChange?.Invoke();
+            OnPlayerInfoChange?.Invoke();
         }
     }
 }
