@@ -1,4 +1,5 @@
 using System;
+using UI;
 using UnityEngine;
 
 namespace Enemies
@@ -10,13 +11,18 @@ namespace Enemies
         public int maxHealth;
         public int attackStat;
         public int defenseStat;
+        public GameObject infoPanelObject;
+        private EnemyInfoPanel infoPanelScript;
 
-        public delegate void EnemyInfoChange();
-        public static event EnemyInfoChange OnEnemyInfoChange;
 
         private void Awake()
         {
             Reset();
+        }
+
+        private void OnEnable()
+        {
+            infoPanelScript = infoPanelObject.GetComponent<EnemyInfoPanel>();
         }
 
         public virtual void Attack()
@@ -43,7 +49,7 @@ namespace Enemies
                 Reset();
             }
 
-            OnEnemyInfoChange?.Invoke();
+            infoPanelScript.UpdateEnemyHealth(currentHealth);
         }
 
         public virtual void Heal(int heal)
@@ -54,13 +60,13 @@ namespace Enemies
                 currentHealth = maxHealth;
             }
 
-            OnEnemyInfoChange?.Invoke();
+            infoPanelScript.UpdateEnemyHealth(currentHealth);
         }
 
         public void Reset()
         {
             currentHealth = maxHealth;
-            OnEnemyInfoChange?.Invoke();
+            infoPanelScript.UpdateEnemyHealth(currentHealth);
         }
     }
 }

@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 69
+  controlID: 50
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 24
+  controlID: 51
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 70
+  controlID: 100
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -1286,7 +1286,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e6faffff
+      m_ExpandedIDs: e6fafffffcad000000af00002eaf0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1303,7 +1303,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 7}
+        m_ClientGUIView: {fileID: 10}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1358,7 +1358,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Encounters
+    - Assets/Scripts/Enemies
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1376,7 +1376,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: d04b0000
     m_LastClickedID: 19408
-    m_ExpandedIDs: 00000000a2b10000a4b10000a6b10000a8b10000aab10000acb10000aeb10000b0b10000b2b10000b4b10000b6b10000
+    m_ExpandedIDs: 00000000ceb10000d0b10000d2b10000d4b10000d6b10000d8b10000dab10000dcb10000deb10000e0b10000e2b10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1405,7 +1405,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a2b10000a4b10000a6b10000a8b10000aab10000acb10000aeb10000b0b10000b2b10000b4b10000b6b10000
+    m_ExpandedIDs: 00000000ceb10000d0b10000d2b10000d4b10000d6b10000d8b10000dab10000dcb10000deb10000e0b10000e2b10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -12,32 +12,34 @@ namespace UI
         public TextMeshProUGUI enemyATKText;
         public TextMeshProUGUI enemyDEFText;
 
-        private void OnEnable()
-        {
-            Enemy.OnEnemyInfoChange += UpdateEnemyInfo;
-        }
-
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        private void Start()
         {
-            if (currentEnemy != null)
+            /*if (currentEnemy != null)
             {
                 UpdateEnemyInfo();
-            }
+            }*/
         }
 
-        public void UpdateEnemyInfo()
+        public void UpdateEnemyInfo(string currentEnemyName, int currentEnemyHealth, int currentEnemyAtk, int currentEnemyDef)
         {
-            enemyNameText.text = currentEnemy.enemyName;
-            enemyHealthText.text = currentEnemy.currentHealth.ToString();
-            enemyATKText.text = currentEnemy.attackStat.ToString();
-            enemyDEFText.text = currentEnemy.defenseStat.ToString();
+            enemyNameText.text = currentEnemyName;
+            enemyHealthText.text = currentEnemyHealth.ToString();
+            enemyATKText.text = currentEnemyAtk.ToString();
+            enemyDEFText.text = currentEnemyDef.ToString();
         }
 
+        public void UpdateEnemyHealth(int newHealth)
+        {
+            enemyHealthText.text = newHealth.ToString();
+        }
+
+        /*
         public void SetCurrentEnemy(Enemy newEnemy)
         {
             currentEnemy = newEnemy;
             UpdateEnemyInfo();
         }
+        */
     }
 }
