@@ -1,3 +1,4 @@
+using UI;
 using UnityEngine;
 
 namespace Character
@@ -10,10 +11,7 @@ namespace Character
         public int attackStat;
         public int defenseStat;
 
-        public delegate void PlayerInfoChange();
-        public static event PlayerInfoChange OnPlayerInfoChange;
-
-        private void Awake()
+        private void Start()
         {
             Reset();
         }
@@ -42,7 +40,7 @@ namespace Character
                 Reset();
             }
 
-            OnPlayerInfoChange?.Invoke();
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public virtual void Heal(int heal)
@@ -53,13 +51,13 @@ namespace Character
                 currentHealth = maxHealth;
             }
 
-            OnPlayerInfoChange?.Invoke();
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void Reset()
         {
             currentHealth = maxHealth;
-            OnPlayerInfoChange?.Invoke();
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
     }
 }

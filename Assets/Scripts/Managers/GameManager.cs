@@ -35,6 +35,8 @@ namespace Managers
                     break;
                 case EGameStates.Start:
                     break;
+                case EGameStates.GameOver:
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

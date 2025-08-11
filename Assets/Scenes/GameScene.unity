@@ -293,6 +293,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logPrefab: {fileID: 5264747056468432720, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
   logPanel: {fileID: 1939336450}
+--- !u!1 &187072858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187072859}
+  - component: {fileID: 187072860}
+  m_Layer: 0
+  m_Name: Default
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &187072859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187072858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187072860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187072858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9581c52cda0f4046818b2a6e6770e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Player
+  currentHealth: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
 --- !u!1 &198536685
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +545,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 248630169}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1468652581}
+        m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
+        m_MethodName: SwapPlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 577035698}
+          m_ObjectArgumentAssemblyTypeName: Character.Player, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &248630169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1118,7 @@ MonoBehaviour:
   maxHealth: 18
   attackStat: 5
   defenseStat: 2
+  infoPanelObject: {fileID: 0}
 --- !u!1 &447656266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,31 +1386,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 577035697}
-  - component: {fileID: 577035696}
+  - component: {fileID: 577035698}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
+  m_Name: Groblin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &577035696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577035695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9581c52cda0f4046818b2a6e6770e11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: Player
-  currentHealth: 40
-  maxHealth: 40
-  attackStat: 4
-  defenseStat: 3
 --- !u!4 &577035697
 Transform:
   m_ObjectHideFlags: 0
@@ -1357,13 +1402,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577035695}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 538.3744, y: 298.7902, z: -2.953356}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1613635659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577035698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577035695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63ba565a03241b99f770931cbc70821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Groblin
+  currentHealth: 15
+  maxHealth: 30
+  attackStat: 6
+  defenseStat: 2
 --- !u!224 &586683658 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 82843368456742439, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
@@ -2390,6 +2452,7 @@ MonoBehaviour:
   maxHealth: 30
   attackStat: 11
   defenseStat: 6
+  infoPanelObject: {fileID: 0}
 --- !u!1 &999654336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3542,6 +3605,18 @@ MonoBehaviour:
           m_StringArgument: BleeBloo
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1468652581}
+        m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
+        m_MethodName: MainAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1427210824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3799,6 +3874,56 @@ MonoBehaviour:
   enemyHealthText: {fileID: 1972391260}
   enemyATKText: {fileID: 1949197591}
   enemyDEFText: {fileID: 1723394969}
+--- !u!1 &1468652578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468652580}
+  - component: {fileID: 1468652581}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468652580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468652578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 538.3744, y: 298.7902, z: -2.953356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468652581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468652578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236f11eaf395467da92b9d283acb1abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 187072860}
+  mainName: 
+  mainCurrentHealth: 0
+  mainMaxHealth: 0
+  mainAttackStat: 0
+  mainDefenseStat: 0
 --- !u!1 &1520055069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,6 +4060,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520055069}
   m_CullTransparentMesh: 1
+--- !u!1 &1613635658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613635659}
+  m_Layer: 0
+  m_Name: PlayerCharacters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1613635659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613635658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 538.3744, y: 298.7902, z: -2.953356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 577035697}
+  - {fileID: 187072859}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623391941
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,8 +5659,9 @@ SceneRoots:
   - {fileID: 1623391945}
   - {fileID: 1924975776}
   - {fileID: 905203285}
-  - {fileID: 577035697}
   - {fileID: 2023888338}
   - {fileID: 720616615}
   - {fileID: 1355730298}
   - {fileID: 729675850}
+  - {fileID: 1468652580}
+  - {fileID: 1613635659}
