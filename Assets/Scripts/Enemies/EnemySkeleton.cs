@@ -1,3 +1,4 @@
+using Managers;
 using UnityEngine;
 
 namespace Enemies
@@ -7,6 +8,7 @@ namespace Enemies
         public override void Attack()
         {
             print("Skeleton Attack");
+            PlayerManager.instance.PlayerTakeDamage(attackStat);
         }
 
         public override void Skill_01()

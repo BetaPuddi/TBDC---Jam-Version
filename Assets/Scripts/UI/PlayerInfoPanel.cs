@@ -15,6 +15,7 @@ namespace UI
         public TextMeshProUGUI playerHealthText;
         public TextMeshProUGUI playerATKText;
         public TextMeshProUGUI playerDEFText;
+        public TextMeshProUGUI playerItemText;
 
         private void Awake()
         {
@@ -40,6 +41,7 @@ namespace UI
             playerHealthText.text = playerRef.currentHealth.ToString();
             playerATKText.text = playerRef.attackStat.ToString();
             playerDEFText.text = playerRef.defenseStat.ToString();
+            playerItemText.text = playerRef.itemUses.ToString();
         }
 
         public void SetPlayerStats()

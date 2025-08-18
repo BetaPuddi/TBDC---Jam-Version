@@ -1,6 +1,8 @@
 using System;
+using Managers;
 using UI;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Enemies
 {
@@ -11,23 +13,21 @@ namespace Enemies
         public int maxHealth;
         public int attackStat;
         public int defenseStat;
-        public GameObject infoPanelObject;
-        private EnemyInfoPanel infoPanelScript;
-
 
         private void Awake()
         {
-            Reset();
+
         }
 
-        private void OnEnable()
+        private void Start()
         {
-            infoPanelScript = infoPanelObject.GetComponent<EnemyInfoPanel>();
+            Reset();
         }
 
         public virtual void Attack()
         {
             print("Enemy attack");
+            PlayerManager.instance.PlayerTakeDamage(attackStat);
         }
 
         public virtual void Skill_01()
@@ -42,14 +42,14 @@ namespace Enemies
 
         public virtual void TakeDamage(int damage)
         {
-            currentHealth -= damage;
+            currentHealth -= (damage - defenseStat);
             if (currentHealth <= 0)
             {
                 print("Enemy dead");
                 Reset();
             }
 
-            infoPanelScript.UpdateEnemyHealth(currentHealth);
+            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
         public virtual void Heal(int heal)
@@ -60,13 +60,30 @@ namespace Enemies
                 currentHealth = maxHealth;
             }
 
-            infoPanelScript.UpdateEnemyHealth(currentHealth);
+            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
         public void Reset()
         {
             currentHealth = maxHealth;
-            infoPanelScript.UpdateEnemyHealth(currentHealth);
+            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+        }
+
+        public virtual void EnemyTakeTurn()
+        {
+            var actionRoll = Random.Range(0, 3);
+            switch (actionRoll)
+            {
+                case 0:
+                    Attack();
+                    break;
+                case 1:
+                    Skill_01();
+                    break;
+                case 2:
+                    Skill_02();
+                    break;
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ namespace Character
         public int maxHealth;
         public int attackStat;
         public int defenseStat;
+        public int itemUses;
 
         private void Start()
         {
@@ -21,14 +22,23 @@ namespace Character
             print("Player attack");
         }
 
-        public virtual void Skill_01()
+        public virtual void UtilitySkill_01()
         {
             print("Player skill 01");
         }
 
-        public virtual void Skill_02()
+        public virtual void ItemSkill_01()
         {
-            print("Player skill 02");
+            if (itemUses > 0)
+            {
+                print("Player skill 02");
+                itemUses--;
+            }
+            else
+            {
+                print("No uses remaining");
+            }
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public virtual void TakeDamage(int damage)

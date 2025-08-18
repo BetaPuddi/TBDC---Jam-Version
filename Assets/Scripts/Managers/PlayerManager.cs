@@ -11,14 +11,16 @@ namespace Managers
 
         public Player player;
         public delegate void PlayerAttack();
+        public delegate void PlayerUtility();
+        public delegate void PlayerItem();
+        public delegate void TakeDamage(int damage);
+        public delegate void Heal(int heal);
 
-        public PlayerAttack playerAttack;
-
-        public string mainName;
-        public int mainCurrentHealth;
-        public int mainMaxHealth;
-        public int mainAttackStat;
-        public int mainDefenseStat;
+        private PlayerAttack _playerAttack;
+        private PlayerUtility _playerUtility;
+        private PlayerItem _playerItem;
+        private TakeDamage _takeDamage;
+        private Heal _heal;
 
         private void Awake()
         {
@@ -38,17 +40,36 @@ namespace Managers
 
         public void UpdateMainPlayer()
         {
-            mainName = player.playerName;
-            mainCurrentHealth = player.currentHealth;
-            mainMaxHealth = player.maxHealth;
-            mainAttackStat = player.attackStat;
-            mainDefenseStat = player.defenseStat;
-            playerAttack = player.Attack;
+            _playerAttack = player.Attack;
+            _playerUtility = player.UtilitySkill_01;
+            _playerItem = player.ItemSkill_01;
+            _takeDamage = player.TakeDamage;
+            _heal = player.Heal;
         }
 
         public void MainAttack()
         {
-            playerAttack();
+            _playerAttack();
+        }
+
+        public void MainUtility()
+        {
+            _playerUtility();
+        }
+
+        public void MainItem()
+        {
+            _playerItem();
+        }
+
+        public void PlayerTakeDamage(int damage)
+        {
+            _takeDamage(damage);
+        }
+
+        public void PlayerHeal(int heal)
+        {
+            _heal(heal);
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using Enemies;
+using UI;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,7 +11,12 @@ namespace Managers
         public static EnemyManager instance;
 
         public GameObject[] enemies;
-        public GameObject currentEnemy;
+        public Enemy targetEnemy;
+        //public Enemy enemyTarget;
+        public int CurrentHealth;
+        public int MaxHealth;
+        public int AttackStat;
+        public int DefenseStat;
 
         private void Awake()
         {
@@ -22,13 +28,23 @@ namespace Managers
 
         public void SpawnNewEnemy()
         {
-            if (currentEnemy != null)
-            {
-                currentEnemy.GetComponent<Enemy>().Reset();
-                currentEnemy.gameObject.SetActive(false);
-            }
-            currentEnemy = enemies[Random.Range(0, enemies.Length)];
-            currentEnemy.gameObject.SetActive(true);
+            // if (targetEnemy != null)
+            // {
+            //     targetEnemy.GetComponent<Enemy>().Reset();
+            // }
+            targetEnemy = enemies[Random.Range(0, enemies.Length)].gameObject.GetComponent<Enemy>();
+            //enemyTarget = targetEnemy.gameObject.GetComponent<Enemy>();
+            EnemyInfoPanel.instance.UpdateEnemyInfo();
+        }
+
+        public void ImportEnemyStats()
+        {
+
+        }
+
+        public void ImportEnemyAbilities()
+        {
+
         }
     }
 }

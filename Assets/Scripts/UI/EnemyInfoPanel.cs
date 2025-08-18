@@ -1,4 +1,5 @@
 using Enemies;
+using Managers;
 using TMPro;
 using UnityEngine;
 
@@ -6,27 +7,29 @@ namespace UI
 {
     public class EnemyInfoPanel : MonoBehaviour
     {
-        public Enemy currentEnemy;
+        public static EnemyInfoPanel instance;
+
+        public GameObject panel;
         public TextMeshProUGUI enemyNameText;
         public TextMeshProUGUI enemyHealthText;
         public TextMeshProUGUI enemyATKText;
         public TextMeshProUGUI enemyDEFText;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        private void Start()
+        private void OnEnable()
         {
-            /*if (currentEnemy != null)
+            if (instance == null)
             {
-                UpdateEnemyInfo();
-            }*/
+                instance = this;
+            }
         }
 
-        public void UpdateEnemyInfo(string currentEnemyName, int currentEnemyHealth, int currentEnemyAtk, int currentEnemyDef)
+        public void UpdateEnemyInfo()
         {
-            enemyNameText.text = currentEnemyName;
-            enemyHealthText.text = currentEnemyHealth.ToString();
-            enemyATKText.text = currentEnemyAtk.ToString();
-            enemyDEFText.text = currentEnemyDef.ToString();
+            enemyNameText.text = EnemyManager.instance.targetEnemy.enemyName;
+            enemyHealthText.text = EnemyManager.instance.targetEnemy.currentHealth.ToString();
+            enemyATKText.text = EnemyManager.instance.targetEnemy.attackStat.ToString();
+            enemyDEFText.text = EnemyManager.instance.targetEnemy.defenseStat.ToString();
         }
 
         public void UpdateEnemyHealth(int newHealth)

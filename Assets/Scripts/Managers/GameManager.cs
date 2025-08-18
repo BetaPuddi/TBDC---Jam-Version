@@ -9,7 +9,7 @@ namespace Managers
     {
         public static GameManager instance;
 
-        private EGameStates _gameState;
+        public EGameStates _gameState;
 
         private void Awake()
         {
@@ -39,6 +39,14 @@ namespace Managers
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        public void EnemyTurn()
+        {
+            if (_gameState == EGameStates.Combat)
+            {
+                EnemyManager.instance.targetEnemy.EnemyTakeTurn();
             }
         }
     }
