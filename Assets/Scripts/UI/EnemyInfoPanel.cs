@@ -1,4 +1,5 @@
 using Enemies;
+using Enums;
 using Managers;
 using TMPro;
 using UnityEngine;
@@ -26,10 +27,18 @@ namespace UI
 
         public void UpdateEnemyInfo()
         {
-            enemyNameText.text = EnemyManager.instance.targetEnemy.enemyName;
-            enemyHealthText.text = EnemyManager.instance.targetEnemy.currentHealth.ToString();
-            enemyATKText.text = EnemyManager.instance.targetEnemy.attackStat.ToString();
-            enemyDEFText.text = EnemyManager.instance.targetEnemy.defenseStat.ToString();
+            if (EnemyManager.instance.targetEnemy != null && GameManager.instance._gameState == EGameStates.Combat)
+            {
+                panel.SetActive(true);
+                enemyNameText.text = EnemyManager.instance.targetEnemy.enemyName;
+                enemyHealthText.text = EnemyManager.instance.targetEnemy.currentHealth.ToString();
+                enemyATKText.text = EnemyManager.instance.targetEnemy.attackStat.ToString();
+                enemyDEFText.text = EnemyManager.instance.targetEnemy.defenseStat.ToString();
+            }
+            else
+            {
+                panel.SetActive(false);
+            }
         }
 
         public void UpdateEnemyHealth(int newHealth)
