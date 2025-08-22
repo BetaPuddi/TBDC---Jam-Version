@@ -1,6 +1,8 @@
 using System;
+using Enums;
 using Managers;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Encounters
 {
@@ -41,6 +43,14 @@ namespace Encounters
                     break;
                 case "advance":
                     break;
+            }
+        }
+
+        public void Advance()
+        {
+            if (GameManager.instance._gameState == EGameStates.Advance)
+            {
+                GameManager.instance.UpdateGameState(Random.Range(1, 2));
             }
         }
     }

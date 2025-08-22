@@ -12,11 +12,6 @@ namespace Managers
 
         public GameObject[] enemies;
         public Enemy targetEnemy;
-        //public Enemy enemyTarget;
-        public int CurrentHealth;
-        public int MaxHealth;
-        public int AttackStat;
-        public int DefenseStat;
 
         private void Awake()
         {
@@ -28,12 +23,7 @@ namespace Managers
 
         public void SpawnNewEnemy()
         {
-            // if (targetEnemy != null)
-            // {
-            //     targetEnemy.GetComponent<Enemy>().Reset();
-            // }
             targetEnemy = enemies[Random.Range(0, enemies.Length)].gameObject.GetComponent<Enemy>();
-            //enemyTarget = targetEnemy.gameObject.GetComponent<Enemy>();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
 
