@@ -1,4 +1,5 @@
 using System;
+using Enums;
 using Managers;
 using UI;
 using UnityEngine;
@@ -45,8 +46,7 @@ namespace Enemies
             currentHealth -= (damage - defenseStat);
             if (currentHealth <= 0)
             {
-                print("Enemy dead");
-                Reset();
+                EnemyDeath();
             }
 
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
@@ -67,6 +67,13 @@ namespace Enemies
         {
             currentHealth = maxHealth;
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+        }
+
+        public void EnemyDeath()
+        {
+            print("Enemy dead");
+            Reset();
+            GameManager.instance.UpdateGameState(3);
         }
 
         public virtual void EnemyTakeTurn()

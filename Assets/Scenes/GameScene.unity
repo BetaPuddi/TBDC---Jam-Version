@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 93012969}
   - component: {fileID: 93012968}
   - component: {fileID: 93012967}
-  - component: {fileID: 93012966}
   m_Layer: 5
   m_Name: AreaInfo
   m_TagString: Untagged
@@ -273,23 +272,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &93012966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93012965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dcbb04d7af856446aec5ca36c6b0b95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1289203928}
-  enemyNameText: {fileID: 1500528493}
-  enemyHealthText: {fileID: 1230872800}
-  enemyATKText: {fileID: 41222261}
-  enemyDEFText: {fileID: 149308863}
 --- !u!114 &93012967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1880,7 +1862,6 @@ GameObject:
   - component: {fileID: 385168720}
   - component: {fileID: 385168723}
   - component: {fileID: 385168722}
-  - component: {fileID: 385168721}
   m_Layer: 5
   m_Name: NPCInfo
   m_TagString: Untagged
@@ -1908,23 +1889,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -133.77176}
   m_SizeDelta: {x: 200, y: 267.5435}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &385168721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385168719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dcbb04d7af856446aec5ca36c6b0b95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1200871138}
-  enemyNameText: {fileID: 895030093}
-  enemyHealthText: {fileID: 264170092}
-  enemyATKText: {fileID: 1220959958}
-  enemyDEFText: {fileID: 335830345}
 --- !u!114 &385168722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5456,11 +5420,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 921524900}
   - {fileID: 435097726}
-  targetEnemy: {fileID: 0}
-  CurrentHealth: 0
-  MaxHealth: 0
-  AttackStat: 0
-  DefenseStat: 0
+  targetEnemy: {fileID: 921524902}
 --- !u!4 &1355730298
 Transform:
   m_ObjectHideFlags: 0

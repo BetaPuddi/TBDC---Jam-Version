@@ -22,6 +22,7 @@ namespace Managers
         public void UpdateGameState(int newGameState)
         {
             _gameState = (EGameStates)newGameState;
+            UIManager.instance.ToggleInfoUI();
             switch (_gameState)
             {
                 case EGameStates.Combat:
