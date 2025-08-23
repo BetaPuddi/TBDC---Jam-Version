@@ -24,6 +24,7 @@ namespace Managers
         {
             currentNpc = npcArray[Random.Range(0, npcArray.Length)];
             currentNpc.InitialiseNPC();
+            NPCInfoPanel.instance.UpdateNPCInfo();
         }
 
         public void SwapButton()
