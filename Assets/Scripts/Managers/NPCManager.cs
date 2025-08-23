@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using NPCs;
 
 namespace Managers
 {
@@ -8,8 +9,8 @@ namespace Managers
     {
         public static NPCManager instance;
 
-        public GameObject[] NPCs;
-        public GameObject currentNPC;
+        public NPC[] npcArray;
+        public NPC currentNpc;
 
         private void Awake()
         {
@@ -21,9 +22,13 @@ namespace Managers
 
         public void SpawnNewNPC()
         {
-            currentNPC.gameObject.SetActive(false);
-            currentNPC = NPCs[Random.Range(0, NPCs.Length)];
-            currentNPC.gameObject.SetActive(true);
+            currentNpc = npcArray[Random.Range(0, npcArray.Length)];
+            currentNpc.InitialiseNPC();
+        }
+
+        public void SwapButton()
+        {
+            currentNpc.Swap();
         }
     }
 }

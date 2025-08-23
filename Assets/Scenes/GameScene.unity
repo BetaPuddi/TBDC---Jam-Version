@@ -919,13 +919,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1468652581}
-        m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: SwapPlayer
-        m_Mode: 2
+      - m_Target: {fileID: 729675849}
+        m_TargetAssemblyTypeName: Managers.NPCManager, Assembly-CSharp
+        m_MethodName: SwapButton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 577035698}
-          m_ObjectArgumentAssemblyTypeName: Character.Player, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3230,8 +3230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6520685dfb44cd696a6ae9c178a3da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCs: []
-  currentNPC: {fileID: 0}
+  npcArray:
+  - {fileID: 1232963288}
+  currentNpc: {fileID: 0}
 --- !u!4 &729675850
 Transform:
   m_ObjectHideFlags: 0
@@ -5035,6 +5036,54 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1232963286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232963287}
+  - component: {fileID: 1232963288}
+  m_Layer: 0
+  m_Name: CharacterSwapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232963287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232963286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1372264868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232963288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232963286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2886e133dd38434ebb5b9075bb489a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingToSwap: {fileID: 0}
+  npcName: 
+  characterArray:
+  - {fileID: 577035695}
 --- !u!1 &1256418058
 GameObject:
   m_ObjectHideFlags: 0
@@ -5434,6 +5483,38 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1372264867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372264868}
+  m_Layer: 0
+  m_Name: NPCs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1372264868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372264867}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 398.66916, y: 302.6706, z: -3.7115045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1232963287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1389124579
@@ -6066,7 +6147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236f11eaf395467da92b9d283acb1abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 187072860}
+  player: {fileID: 577035698}
 --- !u!1 &1500528490
 GameObject:
   m_ObjectHideFlags: 0
@@ -8431,3 +8512,4 @@ SceneRoots:
   - {fileID: 1468652580}
   - {fileID: 1613635659}
   - {fileID: 753336857}
+  - {fileID: 1372264868}

@@ -50,7 +50,7 @@ namespace Encounters
         {
             if (GameManager.instance._gameState == EGameStates.Advance)
             {
-                GameManager.instance.UpdateGameState(Random.Range(1, 2));
+                GameManager.instance.UpdateGameState(Random.Range(1, 3));
             }
         }
     }

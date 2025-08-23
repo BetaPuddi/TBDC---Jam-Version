@@ -13,5 +13,10 @@ namespace NPCs
         {
             throw new System.NotImplementedException();
         }
+
+        public override void InitialiseNPC()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
