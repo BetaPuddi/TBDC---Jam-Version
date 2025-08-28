@@ -10,6 +10,7 @@ namespace Managers
         public static PlayerManager instance;
 
         public Player player;
+        public Player defaultPlayer;
         public delegate void PlayerAttack();
         public delegate void PlayerUtility();
         public delegate void PlayerItem();
@@ -70,6 +71,11 @@ namespace Managers
         public void PlayerHeal(int heal)
         {
             _heal(heal);
+        }
+
+        public void InitialisePlayer()
+        {
+            player = defaultPlayer;
         }
     }
 }

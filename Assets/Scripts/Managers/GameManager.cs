@@ -35,8 +35,16 @@ namespace Managers
                     EncounterManager.instance.NewEncounter("advance");
                     break;
                 case EGameStates.Start:
+                    UIManager.instance.ToggleUI();
+                    EncounterManager.instance.NewEncounter("start");
                     break;
                 case EGameStates.GameOver:
+                    EnemyManager.instance.targetEnemy.Reset();
+                    PlayerManager.instance.InitialisePlayer();
+                    PlayerManager.instance.player.Reset();
+                    MenuManager.instance.ToggleGameOverMenu();
+                    break;
+                case EGameStates.MainMenu:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

@@ -8,6 +8,7 @@ namespace Managers
     {
         public static UIManager instance;
 
+        public GameObject uiCanvas;
         public GameObject enemyInfoPanel;
         public GameObject playerInfoPanel;
         public GameObject npcInfoPanel;
@@ -40,17 +41,33 @@ namespace Managers
                     areaInfoPanel.SetActive(false);
                     enemyInfoPanel.SetActive(false);
                     break;
-                case EGameStates.Start:
+                case EGameStates.MainMenu:
                     playerInfoPanel.SetActive(false);
                     npcInfoPanel.SetActive(false);
                     areaInfoPanel.SetActive(false);
                     enemyInfoPanel.SetActive(false);
                     break;
                 case EGameStates.GameOver:
+                    // playerInfoPanel.SetActive(false);
+                    // npcInfoPanel.SetActive(false);
+                    // areaInfoPanel.SetActive(false);
+                    // enemyInfoPanel.SetActive(false);
+                    ToggleUI();
+                    break;
+                case EGameStates.Start:
+                    playerInfoPanel.SetActive(true);
+                    npcInfoPanel.SetActive(false);
+                    areaInfoPanel.SetActive(false);
+                    enemyInfoPanel.SetActive(false);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        public void ToggleUI()
+        {
+            uiCanvas.SetActive(!uiCanvas.activeSelf);
         }
     }
 }

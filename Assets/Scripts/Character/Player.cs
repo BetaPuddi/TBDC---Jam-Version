@@ -1,3 +1,5 @@
+using Enums;
+using Managers;
 using UI;
 using UnityEngine;
 
@@ -14,7 +16,10 @@ namespace Character
 
         private void Start()
         {
-            Reset();
+            if (GameManager.instance._gameState != EGameStates.MainMenu)
+            {
+                Reset();
+            }
         }
 
         public virtual void Attack()
@@ -47,6 +52,7 @@ namespace Character
             if (currentHealth <= 0)
             {
                 print("Player dead");
+                GameManager.instance.UpdateGameState(4);
                 Reset();
             }
 

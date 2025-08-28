@@ -43,6 +43,9 @@ namespace Encounters
                     break;
                 case "advance":
                     break;
+                case "start":
+                    GameManager.instance.UpdateGameState(1);
+                    break;
             }
         }
 

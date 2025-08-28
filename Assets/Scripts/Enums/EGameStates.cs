@@ -6,6 +6,7 @@ namespace Enums
         Combat,
         NPC,
         Advance,
-        GameOver
+        GameOver,
+        MainMenu
     }
 }

@@ -22,7 +22,10 @@ namespace Enemies
 
         private void Start()
         {
-            Reset();
+            if (GameManager.instance._gameState != EGameStates.MainMenu)
+            {
+                Reset();
+            }
         }
 
         public virtual void Attack()
