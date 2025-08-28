@@ -1,5 +1,9 @@
 using System;
+using Enums;
+using Managers;
+using UI;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Enemies
 {
@@ -11,17 +15,23 @@ namespace Enemies
         public int attackStat;
         public int defenseStat;
 
-        public delegate void EnemyInfoChange();
-        public static event EnemyInfoChange OnEnemyInfoChange;
-
         private void Awake()
         {
-            Reset();
+
+        }
+
+        private void Start()
+        {
+            if (GameManager.instance._gameState != EGameStates.MainMenu)
+            {
+                Reset();
+            }
         }
 
         public virtual void Attack()
         {
             print("Enemy attack");
+            PlayerManager.instance.PlayerTakeDamage(attackStat);
         }
 
         public virtual void Skill_01()
@@ -36,14 +46,13 @@ namespace Enemies
 
         public virtual void TakeDamage(int damage)
         {
-            currentHealth -= damage;
+            currentHealth -= (damage - defenseStat);
             if (currentHealth <= 0)
             {
-                print("Enemy dead");
-                Reset();
+                EnemyDeath();
             }
 
-            OnEnemyInfoChange?.Invoke();
+            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
         public virtual void Heal(int heal)
@@ -54,13 +63,37 @@ namespace Enemies
                 currentHealth = maxHealth;
             }
 
-            OnEnemyInfoChange?.Invoke();
+            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
         public void Reset()
         {
             currentHealth = maxHealth;
-            OnEnemyInfoChange?.Invoke();
+            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+        }
+
+        public void EnemyDeath()
+        {
+            print("Enemy dead");
+            Reset();
+            GameManager.instance.UpdateGameState(3);
+        }
+
+        public virtual void EnemyTakeTurn()
+        {
+            var actionRoll = Random.Range(0, 3);
+            switch (actionRoll)
+            {
+                case 0:
+                    Attack();
+                    break;
+                case 1:
+                    Skill_01();
+                    break;
+                case 2:
+                    Skill_02();
+                    break;
+            }
         }
     }
 }

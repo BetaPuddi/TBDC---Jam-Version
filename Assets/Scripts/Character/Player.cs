@@ -1,3 +1,6 @@
+using Enums;
+using Managers;
+using UI;
 using UnityEngine;
 
 namespace Character
@@ -9,13 +12,14 @@ namespace Character
         public int maxHealth;
         public int attackStat;
         public int defenseStat;
+        public int itemUses;
 
-        public delegate void PlayerInfoChange();
-        public static event PlayerInfoChange OnPlayerInfoChange;
-
-        private void Awake()
+        private void Start()
         {
-            Reset();
+            if (GameManager.instance._gameState != EGameStates.MainMenu)
+            {
+                Reset();
+            }
         }
 
         public virtual void Attack()
@@ -23,14 +27,23 @@ namespace Character
             print("Player attack");
         }
 
-        public virtual void Skill_01()
+        public virtual void UtilitySkill_01()
         {
             print("Player skill 01");
         }
 
-        public virtual void Skill_02()
+        public virtual void ItemSkill_01()
         {
-            print("Player skill 02");
+            if (itemUses > 0)
+            {
+                print("Player skill 02");
+                itemUses--;
+            }
+            else
+            {
+                print("No uses remaining");
+            }
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public virtual void TakeDamage(int damage)
@@ -39,10 +52,11 @@ namespace Character
             if (currentHealth <= 0)
             {
                 print("Player dead");
+                GameManager.instance.UpdateGameState(4);
                 Reset();
             }
 
-            OnPlayerInfoChange?.Invoke();
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public virtual void Heal(int heal)
@@ -53,13 +67,13 @@ namespace Character
                 currentHealth = maxHealth;
             }
 
-            OnPlayerInfoChange?.Invoke();
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void Reset()
         {
             currentHealth = maxHealth;
-            OnPlayerInfoChange?.Invoke();
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
     }
 }
