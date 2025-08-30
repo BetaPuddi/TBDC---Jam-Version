@@ -44,9 +44,9 @@ namespace Enemies
             print("Enemy skill 02");
         }
 
-        public virtual void TakeDamage(int damage)
+        public virtual void TakeDamage(float damage)
         {
-            currentHealth -= (damage - defenseStat);
+            currentHealth -= Mathf.RoundToInt(damage - defenseStat);
             if (currentHealth <= 0)
             {
                 EnemyDeath();
@@ -55,9 +55,9 @@ namespace Enemies
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
-        public virtual void Heal(int heal)
+        public virtual void Heal(float heal)
         {
-            currentHealth += heal;
+            currentHealth += Mathf.RoundToInt(heal);
             if (currentHealth > maxHealth)
             {
                 currentHealth = maxHealth;

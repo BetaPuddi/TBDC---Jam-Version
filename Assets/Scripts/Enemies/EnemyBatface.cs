@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Enemies
 {
-    public class EnemyBat : Enemy
+    public class EnemyBatface : Enemy
     {
         public override void Attack()
         {
@@ -14,9 +14,9 @@ namespace Enemies
         public override void Skill_01()
         {
             print("Bat Skill 01");
-            var skillDamage = Mathf.RoundToInt(attackStat * 0.5f);
+            var skillDamage = attackStat * 0.5f;
             PlayerManager.instance.PlayerTakeDamage(skillDamage);
-            var skillHeal = Mathf.RoundToInt((defenseStat * 0.2f) + (currentHealth * 0.2f));
+            var skillHeal = (defenseStat * 0.2f) + (currentHealth * 0.2f);
             Heal(skillHeal);
         }
 

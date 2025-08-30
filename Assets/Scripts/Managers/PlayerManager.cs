@@ -63,14 +63,20 @@ namespace Managers
             _playerItem();
         }
 
-        public void PlayerTakeDamage(int damage)
+        public void PlayerTakeDamage(float damage)
         {
-            _takeDamage(damage);
+            _takeDamage(Mathf.RoundToInt(damage));
         }
 
-        public void PlayerHeal(int heal)
+        public void PlayerHeal(float heal)
         {
-            _heal(heal);
+            _heal(Mathf.RoundToInt(heal));
+        }
+
+        public void ChangeDefense(int amount)
+        {
+            player.defenseStat += amount;
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void InitialisePlayer()

@@ -1481,7 +1481,7 @@ GameObject:
   - component: {fileID: 435097727}
   - component: {fileID: 435097728}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: Batface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4290,7 +4290,7 @@ GameObject:
   - component: {fileID: 921524901}
   - component: {fileID: 921524902}
   m_Layer: 0
-  m_Name: Skeleton
+  m_Name: Skelebob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4323,7 +4323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb9948f3ed64e4090b411a5f1118f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Skeleton
+  enemyName: Skelebob
   currentHealth: 30
   maxHealth: 30
   attackStat: 11
