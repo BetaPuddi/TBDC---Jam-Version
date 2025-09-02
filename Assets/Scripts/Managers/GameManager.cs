@@ -35,7 +35,7 @@ namespace Managers
                     EncounterManager.instance.NewEncounter("advance");
                     break;
                 case EGameStates.Start:
-                    UIManager.instance.ToggleUI();
+                    //UIManager.instance.ToggleUI();
                     EncounterManager.instance.NewEncounter("start");
                     break;
                 case EGameStates.GameOver:

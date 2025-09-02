@@ -9,7 +9,7 @@ namespace Enemies
         public override void Attack()
         {
             var damageOut = attackStat + Random.Range(-3, 3) - PlayerManager.instance.player.defenseStat;
-            PlayerManager.instance.player.TakeDamage(damageOut);
+            PlayerManager.instance.PlayerTakeDamage(damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             attackStat = defStat;
@@ -20,7 +20,7 @@ namespace Enemies
         public override void Skill_01()
         {
             var damageOut = defenseStat + Random.Range(-3, 3) - PlayerManager.instance.player.attackStat;
-            PlayerManager.instance.player.TakeDamage(damageOut);
+            PlayerManager.instance.PlayerTakeDamage(damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             defenseStat = atkStat;

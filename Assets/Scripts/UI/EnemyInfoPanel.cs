@@ -27,7 +27,7 @@ namespace UI
 
         public void UpdateEnemyInfo()
         {
-            if (EnemyManager.instance.targetEnemy != null && GameManager.instance._gameState == EGameStates.Combat)
+            if (EnemyManager.instance.targetEnemy != null /*&& GameManager.instance._gameState == EGameStates.Combat*/)
             {
                 panel.SetActive(true);
                 enemyNameText.text = EnemyManager.instance.targetEnemy.enemyName;

@@ -26,6 +26,7 @@ namespace Enemies
             {
                 Reset();
             }
+            currentHealth = maxHealth;
         }
 
         public virtual void Attack()
@@ -46,7 +47,7 @@ namespace Enemies
 
         public virtual void TakeDamage(float damage)
         {
-            currentHealth -= Mathf.RoundToInt(damage - defenseStat);
+            currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage - defenseStat, 0, Mathf.Infinity));
             if (currentHealth <= 0)
             {
                 EnemyDeath();
