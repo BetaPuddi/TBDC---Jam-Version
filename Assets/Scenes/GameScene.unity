@@ -1244,6 +1244,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342758858}
   m_CullTransparentMesh: 1
+--- !u!1 &362000328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362000329}
+  - component: {fileID: 362000330}
+  m_Layer: 0
+  m_Name: Gamblambler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362000329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362000328}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 905203285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &362000330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362000328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2915a0b4f2a48e4914db6584720de98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Gamblambler
+  currentHealth: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
 --- !u!1 &362698647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,7 +1565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Bat
   currentHealth: 18
-  maxHealth: 18
+  maxHealth: 180
   attackStat: 5
   defenseStat: 2
 --- !u!1 &445636674
@@ -1983,9 +2032,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Groblin
   currentHealth: 30
-  maxHealth: 30
+  maxHealth: 300
   attackStat: 6
-  defenseStat: 2
+  defenseStat: 5
   itemUses: 2
 --- !u!1 &584139027
 GameObject:
@@ -2694,6 +2743,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &692391850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692391851}
+  - component: {fileID: 692391852}
+  m_Layer: 0
+  m_Name: LemonSlime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &692391851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692391850}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 905203285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692391852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692391850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089d664fbe0041649023e47155a7fcb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Lemon Slime
+  currentHealth: 15
+  maxHealth: 150
+  attackStat: 2
+  defenseStat: 13
 --- !u!1 &696553488
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,6 +3363,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &769780416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769780417}
+  - component: {fileID: 769780418}
+  m_Layer: 0
+  m_Name: HauntedTofu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &769780417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769780416}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 905203285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &769780418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769780416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb096b2908b44515b83272a371483f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Haunted Tofu
+  currentHealth: 40
+  maxHealth: 400
+  attackStat: 2
+  defenseStat: 15
 --- !u!1 &780967953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,6 +4048,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884217116}
   m_CullTransparentMesh: 1
+--- !u!1 &891906907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891906908}
+  - component: {fileID: 891906909}
+  m_Layer: 0
+  m_Name: ImpCat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &891906908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891906907}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 905203285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &891906909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891906907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7543b886d724269934fa724ba5a439c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: An imp and also a cat
+  currentHealth: 36
+  maxHealth: 360
+  attackStat: 12
+  defenseStat: 8
 --- !u!1 &895030091
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,6 +4340,12 @@ Transform:
   m_Children:
   - {fileID: 921524901}
   - {fileID: 435097727}
+  - {fileID: 891906908}
+  - {fileID: 692391851}
+  - {fileID: 362000329}
+  - {fileID: 1023460871}
+  - {fileID: 769780417}
+  - {fileID: 1600782229}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &916651807
@@ -4325,8 +4527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Skelebob
   currentHealth: 30
-  maxHealth: 30
-  attackStat: 11
+  maxHealth: 300
+  attackStat: 6
   defenseStat: 2
 --- !u!1 &945515815
 GameObject:
@@ -4640,6 +4842,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005544483}
   m_CullTransparentMesh: 1
+--- !u!1 &1023460870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023460871}
+  - component: {fileID: 1023460872}
+  m_Layer: 0
+  m_Name: CreamyLisa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023460871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023460870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 905203285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1023460872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023460870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1c5a13b9714735a81edf80fe0b9fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Creamy Lisa
+  currentHealth: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
 --- !u!1 &1045150138
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,6 +6305,12 @@ MonoBehaviour:
   enemies:
   - {fileID: 921524900}
   - {fileID: 435097726}
+  - {fileID: 891906907}
+  - {fileID: 692391850}
+  - {fileID: 362000328}
+  - {fileID: 1023460870}
+  - {fileID: 769780416}
+  - {fileID: 1600782228}
   targetEnemy: {fileID: 921524902}
 --- !u!4 &1355730298
 Transform:
@@ -7006,6 +7263,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520055069}
   m_CullTransparentMesh: 1
+--- !u!1 &1600782228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600782229}
+  - component: {fileID: 1600782230}
+  m_Layer: 0
+  m_Name: RottenChickenLeg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1600782229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600782228}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 905203285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600782230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600782228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cee531a0bb4825b626aa6b8636c12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Rotten Chicken Leg
+  currentHealth: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
 --- !u!1 &1613635658
 GameObject:
   m_ObjectHideFlags: 0
