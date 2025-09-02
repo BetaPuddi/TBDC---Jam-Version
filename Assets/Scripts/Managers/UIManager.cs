@@ -52,7 +52,7 @@ namespace Managers
                     // npcInfoPanel.SetActive(false);
                     // areaInfoPanel.SetActive(false);
                     // enemyInfoPanel.SetActive(false);
-                    ToggleUI();
+                    //ToggleUI();
                     break;
                 case EGameStates.Start:
                     playerInfoPanel.SetActive(true);

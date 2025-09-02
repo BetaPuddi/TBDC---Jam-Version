@@ -1,3 +1,4 @@
+using System;
 using Enums;
 using Managers;
 using UI;
@@ -14,12 +15,14 @@ namespace Character
         public int defenseStat;
         public int itemUses;
 
+        private void Awake()
+        {
+            currentHealth = maxHealth;
+        }
+
         private void Start()
         {
-            if (GameManager.instance._gameState != EGameStates.MainMenu)
-            {
                 Reset();
-            }
         }
 
         public virtual void Attack()
@@ -51,9 +54,7 @@ namespace Character
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
-                print("Player dead");
-                GameManager.instance.UpdateGameState(4);
-                Reset();
+                GameOver();
             }
 
             PlayerInfoPanel.instance.UpdatePlayerInfo();
@@ -68,6 +69,13 @@ namespace Character
             }
 
             PlayerInfoPanel.instance.UpdatePlayerInfo();
+        }
+
+        public void GameOver()
+        {
+            print("Player dead");
+            GameManager.instance.UpdateGameState(4);
+            Reset();
         }
 
         public void Reset()

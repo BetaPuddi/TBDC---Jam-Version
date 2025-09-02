@@ -29,7 +29,17 @@ namespace Managers
             {
                 instance = this;
             }
+            InitialisePlayer();
+        }
+
+        private void OnEnable()
+        {
             UpdateMainPlayer();
+        }
+
+        private void Start()
+        {
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void SwapPlayer(Player newPlayer)
@@ -63,14 +73,41 @@ namespace Managers
             _playerItem();
         }
 
-        public void PlayerTakeDamage(int damage)
+        public void PlayerTakeDamage(float damage)
         {
-            _takeDamage(damage);
+            _takeDamage(Mathf.RoundToInt(damage));
         }
 
-        public void PlayerHeal(int heal)
+        public void PlayerHeal(float heal)
         {
-            _heal(heal);
+            _heal(Mathf.RoundToInt(heal));
+        }
+
+        public void ChangeDefense(int amount)
+        {
+            player.defenseStat += amount;
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
+        }
+
+        public void ChangeAttack(int amount)
+        {
+            player.attackStat += amount;
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
+        }
+
+        public void ChangeMaxHealth(int amount)
+        {
+            player.maxHealth += amount;
+            if (player.currentHealth > player.maxHealth)
+            {
+                player.maxHealth = player.currentHealth;
+            }
+
+            if (player.currentHealth <= 0)
+            {
+                player.GameOver();
+            }
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void InitialisePlayer()
