@@ -579,6 +579,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logPrefab: {fileID: 5264747056468432720, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
   logPanel: {fileID: 1939336450}
+--- !u!1 &159695061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159695062}
+  - component: {fileID: 159695063}
+  m_Layer: 0
+  m_Name: P_CreamyLisa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &159695062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159695061}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159695063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159695061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4597f11bcfbc4a49ac9034f7362eefff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Creamy Lisa
+  currentHealth: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
+  itemUses: 0
 --- !u!1 &187072858
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +640,7 @@ GameObject:
   - component: {fileID: 187072859}
   - component: {fileID: 187072860}
   m_Layer: 0
-  m_Name: Default
+  m_Name: P_Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -907,6 +957,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248630166}
   m_CullTransparentMesh: 1
+--- !u!1 &303250522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303250523}
+  - component: {fileID: 303250524}
+  m_Layer: 0
+  m_Name: P_Skelebob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303250523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303250522}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &303250524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303250522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a78970a84b5409fa9d7732b1f582aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Skelebob
+  currentHealth: 0
+  maxHealth: 300
+  attackStat: 6
+  defenseStat: 2
+  itemUses: 0
 --- !u!1 &305920797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1355,7 @@ GameObject:
   - component: {fileID: 362000329}
   - component: {fileID: 362000330}
   m_Layer: 0
-  m_Name: Gamblambler
+  m_Name: E_Gamblambler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1530,7 +1630,7 @@ GameObject:
   - component: {fileID: 435097727}
   - component: {fileID: 435097728}
   m_Layer: 0
-  m_Name: Batface
+  m_Name: E_Batface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1986,6 +2086,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &567815737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 567815738}
+  - component: {fileID: 567815739}
+  m_Layer: 0
+  m_Name: P_HauntedTofu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &567815738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567815737}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567815739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567815737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006d0f2d185542e3976cc613d9179699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Haunted Tofu
+  currentHealth: 0
+  maxHealth: 400
+  attackStat: 2
+  defenseStat: 15
+  itemUses: 0
 --- !u!1 &577035695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,7 +2147,7 @@ GameObject:
   - component: {fileID: 577035697}
   - component: {fileID: 577035698}
   m_Layer: 0
-  m_Name: Groblin
+  m_Name: P_Groblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2033,8 +2183,8 @@ MonoBehaviour:
   playerName: Groblin
   currentHealth: 30
   maxHealth: 300
-  attackStat: 6
-  defenseStat: 5
+  attackStat: 25
+  defenseStat: 15
   itemUses: 2
 --- !u!1 &584139027
 GameObject:
@@ -2754,7 +2904,7 @@ GameObject:
   - component: {fileID: 692391851}
   - component: {fileID: 692391852}
   m_Layer: 0
-  m_Name: LemonSlime
+  m_Name: E_LemonSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3374,7 +3524,7 @@ GameObject:
   - component: {fileID: 769780417}
   - component: {fileID: 769780418}
   m_Layer: 0
-  m_Name: HauntedTofu
+  m_Name: E_HauntedTofu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3412,6 +3562,56 @@ MonoBehaviour:
   maxHealth: 400
   attackStat: 2
   defenseStat: 15
+--- !u!1 &773487508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773487509}
+  - component: {fileID: 773487510}
+  m_Layer: 0
+  m_Name: P_RottenChickenLeg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773487509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773487508}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773487510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773487508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf980b868924ed2852bb0f5324eacbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Rotten Chicken Leg
+  currentHealth: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
+  itemUses: 0
 --- !u!1 &780967953
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,7 +4259,7 @@ GameObject:
   - component: {fileID: 891906908}
   - component: {fileID: 891906909}
   m_Layer: 0
-  m_Name: ImpCat
+  m_Name: E_ImpCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4492,7 +4692,7 @@ GameObject:
   - component: {fileID: 921524901}
   - component: {fileID: 921524902}
   m_Layer: 0
-  m_Name: Skelebob
+  m_Name: E_Skelebob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4853,7 +5053,7 @@ GameObject:
   - component: {fileID: 1023460871}
   - component: {fileID: 1023460872}
   m_Layer: 0
-  m_Name: CreamyLisa
+  m_Name: E_CreamyLisa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5682,6 +5882,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200871138}
   m_CullTransparentMesh: 1
+--- !u!1 &1203208787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203208788}
+  - component: {fileID: 1203208789}
+  m_Layer: 0
+  m_Name: P_ImpCat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203208788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203208787}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203208789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203208787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83fb6a0c31df41d1933d131b17e72d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Imp and also a Cat
+  currentHealth: 0
+  maxHealth: 360
+  attackStat: 12
+  defenseStat: 8
+  itemUses: 0
 --- !u!1 &1204345271
 GameObject:
   m_ObjectHideFlags: 0
@@ -5806,6 +6056,14 @@ MonoBehaviour:
   npcName: Character Swapper
   characterArray:
   - {fileID: 577035695}
+  - {fileID: 303250522}
+  - {fileID: 1766694458}
+  - {fileID: 159695061}
+  - {fileID: 1958728461}
+  - {fileID: 1203208787}
+  - {fileID: 567815737}
+  - {fileID: 773487508}
+  - {fileID: 1521300170}
 --- !u!1 &1256418058
 GameObject:
   m_ObjectHideFlags: 0
@@ -7263,6 +7521,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520055069}
   m_CullTransparentMesh: 1
+--- !u!1 &1521300170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521300172}
+  - component: {fileID: 1521300171}
+  m_Layer: 0
+  m_Name: P_LemonSlime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1521300171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521300170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640c182c46d1456a9869eda2ef7754d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Lemon Slime
+  currentHealth: 0
+  maxHealth: 150
+  attackStat: 2
+  defenseStat: 13
+  itemUses: 0
+--- !u!4 &1521300172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521300170}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1600782228
 GameObject:
   m_ObjectHideFlags: 0
@@ -7274,7 +7582,7 @@ GameObject:
   - component: {fileID: 1600782229}
   - component: {fileID: 1600782230}
   m_Layer: 0
-  m_Name: RottenChickenLeg
+  m_Name: E_RottenChickenLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7342,6 +7650,14 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 577035697}
+  - {fileID: 303250523}
+  - {fileID: 1766694459}
+  - {fileID: 159695062}
+  - {fileID: 1203208788}
+  - {fileID: 1958728462}
+  - {fileID: 567815738}
+  - {fileID: 773487509}
+  - {fileID: 1521300172}
   - {fileID: 187072859}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7798,6 +8114,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765164570}
   m_CullTransparentMesh: 1
+--- !u!1 &1766694458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766694459}
+  - component: {fileID: 1766694460}
+  m_Layer: 0
+  m_Name: P_Batface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1766694459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766694458}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1766694460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766694458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318bd321dd2e4157bf45251dfaec6868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Batface
+  currentHealth: 0
+  maxHealth: 180
+  attackStat: 5
+  defenseStat: 2
+  itemUses: 0
 --- !u!1 &1791135750
 GameObject:
   m_ObjectHideFlags: 0
@@ -8403,6 +8769,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949197589}
   m_CullTransparentMesh: 1
+--- !u!1 &1958728461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1958728462}
+  - component: {fileID: 1958728463}
+  m_Layer: 0
+  m_Name: P_Gamblambler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1958728462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958728461}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958728463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958728461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6f5cb15eb74a43a2f898af7830796b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Gamblambler
+  currentHealth: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
+  itemUses: 0
 --- !u!1 &1972391258
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,7 +47,7 @@ namespace Enemies
 
         public virtual void TakeDamage(float damage)
         {
-            currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage - defenseStat, 0, Mathf.Infinity));
+            currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
             if (currentHealth <= 0)
             {
                 EnemyDeath();
@@ -95,6 +95,33 @@ namespace Enemies
                     Skill_02();
                     break;
             }
+        }
+
+        public void ChangeDefense(int amount)
+        {
+            defenseStat += amount;
+            EnemyInfoPanel.instance.UpdateEnemyInfo();
+        }
+
+        public void ChangeAttack(int amount)
+        {
+            attackStat += amount;
+            EnemyInfoPanel.instance.UpdateEnemyInfo();
+        }
+
+        public void ChangeMaxHealth(int amount)
+        {
+            maxHealth += amount;
+            if (currentHealth > maxHealth)
+            {
+                maxHealth = currentHealth;
+            }
+
+            if (currentHealth <= 0)
+            {
+                EnemyDeath();
+            }
+            EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
     }
 }

@@ -14,8 +14,8 @@ namespace Managers
         public delegate void PlayerAttack();
         public delegate void PlayerUtility();
         public delegate void PlayerItem();
-        public delegate void TakeDamage(int damage);
-        public delegate void Heal(int heal);
+        public delegate void TakeDamage(float damage);
+        public delegate void Heal(float heal);
 
         private PlayerAttack _playerAttack;
         private PlayerUtility _playerUtility;
