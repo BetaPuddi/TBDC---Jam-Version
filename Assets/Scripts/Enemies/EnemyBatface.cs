@@ -16,7 +16,7 @@ namespace Enemies
             print("Bat Skill 01");
             var skillDamage = attackStat * 0.5f;
             PlayerManager.instance.PlayerTakeDamage(skillDamage);
-            var skillHeal = (defenseStat * 0.2f) + (currentHealth * 0.2f);
+            var skillHeal = (defenseStat * 0.2f) + (currentHealth * 0.02f);
             Heal(skillHeal);
         }
 

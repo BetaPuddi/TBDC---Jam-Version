@@ -1,4 +1,5 @@
 using Managers;
+using UnityEngine;
 
 namespace Character
 {
@@ -7,7 +8,7 @@ namespace Character
         public override void Attack()
         {
             print("Groblin attack!");
-            EnemyManager.instance.targetEnemy.TakeDamage(attackStat);
+            EnemyManager.instance.targetEnemy.TakeDamage(attackStat - Random.Range(-3, 4));
         }
 
         public override void UtilitySkill_01()

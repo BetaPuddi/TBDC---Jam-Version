@@ -49,9 +49,9 @@ namespace Character
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public virtual void TakeDamage(int damage)
+        public virtual void TakeDamage(float damage)
         {
-            currentHealth -= damage;
+            currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
             if (currentHealth <= 0)
             {
                 GameOver();
@@ -60,9 +60,9 @@ namespace Character
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public virtual void Heal(int heal)
+        public virtual void Heal(float heal)
         {
-            currentHealth += heal;
+            currentHealth += Mathf.RoundToInt(Mathf.Clamp(heal, 0, Mathf.Infinity));
             if (currentHealth > maxHealth)
             {
                 currentHealth = maxHealth;

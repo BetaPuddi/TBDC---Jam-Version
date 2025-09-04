@@ -1,4 +1,5 @@
 using Managers;
+using UI;
 using UnityEngine;
 
 namespace Enemies
@@ -17,6 +18,7 @@ namespace Enemies
             var damageOut = missingHealth - PlayerManager.instance.player.defenseStat;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
             defenseStat -= 2;
+            EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
     }
 }
