@@ -4,6 +4,7 @@ namespace NPCs
 {
     public abstract class NPC : MonoBehaviour
     {
+        public GameObject[] swapTargets;
         public GameObject thingToSwap;
         public string npcName;
 
@@ -11,6 +12,11 @@ namespace NPCs
 
         public abstract void Interact();
 
-        public abstract void InitialiseNPC();
+        public virtual void InitialiseNPC()
+        {
+            NewSwapTarget();
+        }
+
+        public abstract void NewSwapTarget();
     }
 }
