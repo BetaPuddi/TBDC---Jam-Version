@@ -1,5 +1,6 @@
 using System;
 using Character;
+using Items;
 using UI;
 using UnityEngine;
 
@@ -11,15 +12,15 @@ namespace Managers
 
         public Player player;
         public Player defaultPlayer;
+        public Item currentItem;
+
         public delegate void PlayerAttack();
         public delegate void PlayerUtility();
-        public delegate void PlayerItem();
         public delegate void TakeDamage(float damage);
         public delegate void Heal(float heal);
 
         private PlayerAttack _playerAttack;
         private PlayerUtility _playerUtility;
-        private PlayerItem _playerItem;
         private TakeDamage _takeDamage;
         private Heal _heal;
 
@@ -53,7 +54,7 @@ namespace Managers
         {
             _playerAttack = player.Attack;
             _playerUtility = player.UtilitySkill_01;
-            _playerItem = player.ItemSkill_01;
+
             _takeDamage = player.TakeDamage;
             _heal = player.Heal;
         }
@@ -68,9 +69,19 @@ namespace Managers
             _playerUtility();
         }
 
-        public void MainItem()
+        public void Item()
         {
-            _playerItem();
+            if (player.itemUses > 0)
+            {
+                print("Player skill 02");
+                currentItem.UseItem();
+                player.itemUses--;
+            }
+            else
+            {
+                print("No uses remaining");
+            }
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void PlayerTakeDamage(float damage)

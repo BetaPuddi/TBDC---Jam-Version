@@ -37,16 +37,7 @@ namespace Character
 
         public virtual void ItemSkill_01()
         {
-            if (itemUses > 0)
-            {
-                print("Player skill 02");
-                itemUses--;
-            }
-            else
-            {
-                print("No uses remaining");
-            }
-            PlayerInfoPanel.instance.UpdatePlayerInfo();
+
         }
 
         public virtual void TakeDamage(float damage)
