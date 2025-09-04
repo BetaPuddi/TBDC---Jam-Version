@@ -1,32 +1,26 @@
 using Character;
 using Enums;
+using Items;
 using Managers;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace NPCs
 {
-    public class CharacterSwapper : NPC
+    public class ItemSwapper : NPC
     {
         public override void Swap()
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
-                var player = thingToSwap.GetComponent<Player>();
-                PlayerManager.instance.SwapPlayer(player);
+                var item = thingToSwap.GetComponent<Item>();
+                PlayerManager.instance.SwapItem(item);
                 GameManager.instance._gameState = EGameStates.Advance;
             }
-
         }
 
         public override void Interact()
         {
             throw new System.NotImplementedException();
-        }
-
-        public override void InitialiseNPC()
-        {
-            NewSwapTarget();
         }
 
         public override void NewSwapTarget()

@@ -50,6 +50,13 @@ namespace Managers
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
+        public void SwapItem(Item newItem)
+        {
+            currentItem = newItem;
+            player.itemUses = 2;
+            PlayerInfoPanel.instance.UpdatePlayerInfo();
+        }
+
         public void UpdateMainPlayer()
         {
             _playerAttack = player.Attack;

@@ -18,5 +18,10 @@ namespace NPCs
         {
             throw new System.NotImplementedException();
         }
+
+        public override void NewSwapTarget()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
