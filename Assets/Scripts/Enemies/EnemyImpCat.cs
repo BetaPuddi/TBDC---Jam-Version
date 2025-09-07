@@ -10,10 +10,12 @@ namespace Enemies
         {
             var damageOut = attackStat + Random.Range(-3, 3) - PlayerManager.instance.player.defenseStat;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             attackStat = defStat;
             defenseStat = atkStat;
+            LogManager.instance.InstantiateTextLog($"{enemyName} swapped their stats!");
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
 
@@ -21,10 +23,12 @@ namespace Enemies
         {
             var damageOut = defenseStat + Random.Range(-3, 3) - PlayerManager.instance.player.attackStat;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             defenseStat = atkStat;
             attackStat = defStat;
+            LogManager.instance.InstantiateTextLog($"{enemyName} swapped their stats!");
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
     }
