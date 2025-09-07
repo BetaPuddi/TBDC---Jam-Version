@@ -46,6 +46,12 @@ namespace Managers
                     break;
                 case EGameStates.MainMenu:
                     break;
+                case EGameStates.Exit:
+                    EncounterManager.instance.NewEncounter("exit");
+                    break;
+                case EGameStates.Win:
+                    MenuManager.instance.ToggleWinMenu();
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

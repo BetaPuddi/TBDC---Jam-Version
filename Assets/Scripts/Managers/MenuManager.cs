@@ -1,6 +1,7 @@
 using System;
 using Enums;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Managers
 {
@@ -10,6 +11,7 @@ namespace Managers
 
         public GameObject mainMenu;
         public GameObject gameOverMenu;
+        public GameObject winMenu;
 
         private void Awake()
         {
@@ -35,6 +37,11 @@ namespace Managers
             gameOverMenu.SetActive(!gameOverMenu.activeSelf);
         }
 
+        public void ToggleWinMenu()
+        {
+            winMenu.SetActive(!winMenu.activeSelf);
+        }
+
         public void QuitGame()
         {
             Application.Quit();
@@ -42,12 +49,13 @@ namespace Managers
 
         public void ResetGame()
         {
-            if (GameManager.instance._gameState == EGameStates.GameOver)
-            {
-                ToggleGameOverMenu();
-            }
-            GameManager.instance.UpdateGameState(5);
-            ToggleMainMenu();
+            // if (GameManager.instance._gameState == EGameStates.GameOver)
+            // {
+            //     ToggleGameOverMenu();
+            // }
+            // GameManager.instance.UpdateGameState(5);
+            // ToggleMainMenu();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         public void Restart()
