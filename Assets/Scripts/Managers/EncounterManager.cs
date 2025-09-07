@@ -14,6 +14,10 @@ namespace Encounters
         private string[] encounterType;
         public string currentEncounterType;
 
+        [SerializeField]
+        private int roomsCleared;
+        private int exitChanceModifier;
+
         private void Awake()
         {
             if (instance  == null)
@@ -28,6 +32,7 @@ namespace Encounters
             encounterType[0] = "enemy";
             encounterType[1] = "npc";
             encounterType[2] = "advance";
+            encounterType[3] = "exit";
         }
 
         public void NewEncounter(string encounterType)
@@ -46,14 +51,47 @@ namespace Encounters
                 case "start":
                     GameManager.instance.UpdateGameState(1);
                     break;
+                case "exit":
+
+                    break;
             }
         }
 
         public void Advance()
         {
-            if (GameManager.instance._gameState == EGameStates.Advance)
+            if (GameManager.instance._gameState == EGameStates.Advance && roomsCleared <=10)
             {
                 GameManager.instance.UpdateGameState(Random.Range(1, 3));
+                roomsCleared++;
+            }
+            else if (GameManager.instance._gameState == EGameStates.Advance && roomsCleared > 10)
+            {
+                if (RollForExit())
+                {
+                    GameManager.instance.UpdateGameState(6);
+                    print("exit");
+                }
+                else
+                {
+                    exitChanceModifier++;
+                    GameManager.instance.UpdateGameState(Random.Range(1, 3));
+                    roomsCleared++;
+                }
+            }
+        }
+
+        private bool RollForExit()
+        {
+            var randomRoll = Random.Range(0, 100);
+            var exitChance = 10 + exitChanceModifier;
+            return randomRoll <= exitChance;
+        }
+
+        public void Exit()
+        {
+            if (GameManager.instance._gameState == EGameStates.Exit)
+            {
+                GameManager.instance.UpdateGameState(7);
             }
         }
     }

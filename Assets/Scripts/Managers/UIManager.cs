@@ -60,8 +60,8 @@ namespace Managers
                     areaInfoPanel.SetActive(false);
                     enemyInfoPanel.SetActive(false);
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                case EGameStates.Exit:
+                    break;
             }
         }
 

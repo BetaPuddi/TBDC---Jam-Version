@@ -7,6 +7,8 @@ namespace Enums
         NPC,
         Advance,
         GameOver,
-        MainMenu
+        MainMenu,
+        Exit,
+        Win
     }
 }
