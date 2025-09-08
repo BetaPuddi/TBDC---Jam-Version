@@ -9,8 +9,8 @@ namespace Character
         {
             print("Groblin attack!");
             var damageOut = attackStat - Random.Range(-3, 4);
-            EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+            EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }
 
         public override void UtilitySkill_01()

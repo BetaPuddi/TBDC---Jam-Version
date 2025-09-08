@@ -9,8 +9,8 @@ namespace Character
         public override void Attack()
         {
             var damageOut = attackStat + Random.Range(-3, 3) - EnemyManager.instance.targetEnemy.defenseStat;
-            EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+            EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             attackStat = defStat;
@@ -22,8 +22,8 @@ namespace Character
         public override void UtilitySkill_01()
         {
             var damageOut = defenseStat + Random.Range(-3, 3) - EnemyManager.instance.targetEnemy.attackStat;
-            EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+            EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             defenseStat = atkStat;
