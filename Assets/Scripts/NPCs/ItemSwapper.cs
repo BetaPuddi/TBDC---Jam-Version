@@ -15,6 +15,8 @@ namespace NPCs
                 var item = thingToSwap.GetComponent<Item>();
                 PlayerManager.instance.SwapItem(item);
                 GameManager.instance._gameState = EGameStates.Advance;
+                var text = "You accept the swap.";
+                LogManager.instance.InstantiateTextLog(text);
             }
         }
 
@@ -26,6 +28,13 @@ namespace NPCs
         public override void NewSwapTarget()
         {
             thingToSwap = swapTargets[Random.Range(0, swapTargets.Length)];
+        }
+
+        public override void Introduction()
+        {
+            var text =
+                $"{npcName} appears and offers to swap your item for {thingToSwap.GetComponent<Item>().itemName}!";
+            LogManager.instance.InstantiateTextLog(text);
         }
     }
 }

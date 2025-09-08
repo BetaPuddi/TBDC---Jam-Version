@@ -8834,6 +8834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2f9eb498f146b5ab70b20e84650f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Smoke Bomb
 --- !u!1 &1600782228
 GameObject:
   m_ObjectHideFlags: 0
@@ -9472,6 +9473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5464bf6f8f894ac4b1dec91fdf485d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Power Potion
 --- !u!1 &1791135750
 GameObject:
   m_ObjectHideFlags: 0
@@ -9788,6 +9790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f55b32f45c2466bb0549df293af3d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Heal Potion
 --- !u!1 &1875085267
 GameObject:
   m_ObjectHideFlags: 0
@@ -10165,6 +10168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a8023cf8bc45a28f8dafbc41939b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Defense Potion
 --- !u!1 &1949197589
 GameObject:
   m_ObjectHideFlags: 0
