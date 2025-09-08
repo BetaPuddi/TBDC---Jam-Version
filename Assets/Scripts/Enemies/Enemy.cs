@@ -29,6 +29,11 @@ namespace Enemies
             currentHealth = maxHealth;
         }
 
+        public void EnemyIntroduction()
+        {
+            LogManager.instance.InstantiateTextLog($"Enemy {enemyName} appears!");
+        }
+
         public virtual void Attack()
         {
             print("Enemy attack");
@@ -77,12 +82,13 @@ namespace Enemies
         {
             print("Enemy dead");
             Reset();
+            LogManager.instance.InstantiateTextLog($"{enemyName} is defeated!");
             GameManager.instance.UpdateGameState(3);
         }
 
         public virtual void EnemyTakeTurn()
         {
-            var actionRoll = Random.Range(0, 3);
+            var actionRoll = Random.Range(0, 2);
             switch (actionRoll)
             {
                 case 0:
@@ -91,9 +97,9 @@ namespace Enemies
                 case 1:
                     Skill_01();
                     break;
-                case 2:
-                    Skill_02();
-                    break;
+                // case 2:
+                //     Skill_02();
+                //     break;
             }
         }
 

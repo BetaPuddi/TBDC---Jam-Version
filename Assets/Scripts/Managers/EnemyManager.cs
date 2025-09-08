@@ -24,6 +24,7 @@ namespace Managers
         public void SpawnNewEnemy()
         {
             targetEnemy = enemies[Random.Range(0, enemies.Length)].gameObject.GetComponent<Enemy>();
+            targetEnemy.EnemyIntroduction();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
 
