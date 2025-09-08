@@ -61,6 +61,7 @@ namespace Encounters
         {
             if (GameManager.instance._gameState == EGameStates.Advance && roomsCleared <=10)
             {
+                LogManager.instance.InstantiateTextLog("You advance further into the dungeon.");
                 GameManager.instance.UpdateGameState(Random.Range(1, 3));
                 roomsCleared++;
             }
@@ -69,6 +70,7 @@ namespace Encounters
                 if (RollForExit())
                 {
                     GameManager.instance.UpdateGameState(6);
+                    LogManager.instance.InstantiateTextLog("You find the dungeon exit!");
                     print("exit");
                 }
                 else
@@ -76,6 +78,7 @@ namespace Encounters
                     exitChanceModifier++;
                     GameManager.instance.UpdateGameState(Random.Range(1, 3));
                     roomsCleared++;
+                    LogManager.instance.InstantiateTextLog("You advance further into the dungeon.");
                 }
             }
         }
