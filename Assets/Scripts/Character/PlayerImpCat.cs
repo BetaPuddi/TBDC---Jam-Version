@@ -10,10 +10,12 @@ namespace Character
         {
             var damageOut = attackStat + Random.Range(-3, 3) - EnemyManager.instance.targetEnemy.defenseStat;
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             attackStat = defStat;
             defenseStat = atkStat;
+            LogManager.instance.InstantiateTextLog($"You swapped your stats!");
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
@@ -21,10 +23,12 @@ namespace Character
         {
             var damageOut = defenseStat + Random.Range(-3, 3) - EnemyManager.instance.targetEnemy.attackStat;
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             defenseStat = atkStat;
             attackStat = defStat;
+            LogManager.instance.InstantiateTextLog($"You swapped your stats!");
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
     }

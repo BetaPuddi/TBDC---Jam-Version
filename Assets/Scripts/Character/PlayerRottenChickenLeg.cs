@@ -9,12 +9,15 @@ namespace Character
         {
             var damageOut = attackStat - Random.Range(3, 9);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
         }
 
         public override void UtilitySkill_01()
         {
             EnemyManager.instance.targetEnemy.ChangeAttack(-1);
+            LogManager.instance.InstantiateTextLog($"You reduce {EnemyManager.instance.targetEnemy.enemyName}'s Attack by 1!");
             EnemyManager.instance.targetEnemy.ChangeMaxHealth(-1);
+            LogManager.instance.InstantiateTextLog($"You reduce {EnemyManager.instance.targetEnemy.enemyName}'s MaxHealth by 1!");
         }
     }
 }

@@ -9,12 +9,14 @@ namespace Character
         {
             var damageOut = 2 + Mathf.Clamp((attackStat - EnemyManager.instance.targetEnemy.defenseStat), 0, Mathf.Infinity);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
         }
 
         public override void UtilitySkill_01()
         {
             var damageOut = attackStat / 3;
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
         }
     }
 }
