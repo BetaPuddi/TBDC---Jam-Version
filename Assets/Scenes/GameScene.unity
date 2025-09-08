@@ -8835,6 +8835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Smoke Bomb
+  itemUseText: The Smoke Bomb allows you to escape.
 --- !u!1 &1600782228
 GameObject:
   m_ObjectHideFlags: 0
@@ -9474,6 +9475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Power Potion
+  itemUseText: The Power Potion increases your Attack by 10.
 --- !u!1 &1791135750
 GameObject:
   m_ObjectHideFlags: 0
@@ -9790,7 +9792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f55b32f45c2466bb0549df293af3d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Heal Potion
+  itemName: Healing Potion
+  itemUseText: The Healing Potion heals you to full health.
 --- !u!1 &1875085267
 GameObject:
   m_ObjectHideFlags: 0
@@ -10169,6 +10172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Defense Potion
+  itemUseText: The Defense Potion increases your MaxHealth by 50 and your Defense
+    by 5.
 --- !u!1 &1949197589
 GameObject:
   m_ObjectHideFlags: 0
