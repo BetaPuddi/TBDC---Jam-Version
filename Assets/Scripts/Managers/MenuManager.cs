@@ -12,6 +12,8 @@ namespace Managers
         public GameObject mainMenu;
         public GameObject gameOverMenu;
         public GameObject winMenu;
+        [TextArea]
+        public string introText;
 
         private void Awake()
         {
@@ -24,6 +26,7 @@ namespace Managers
         public void StartGame()
         {
             ToggleMainMenu();
+            LogManager.instance.InstantiateTextLog(introText);
             GameManager.instance.UpdateGameState(0);
         }
 

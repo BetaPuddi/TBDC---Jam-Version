@@ -10071,7 +10071,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
@@ -10896,6 +10896,9 @@ MonoBehaviour:
   mainMenu: {fileID: 945515815}
   gameOverMenu: {fileID: 902460094}
   winMenu: {fileID: 142828777}
+  introText: You wake up at the end of a long dark corridor. The only source of light
+    is a lit torch on a wall nearby. You get up and grab the torch. There is only
+    one way to go.
 --- !u!4 &2036208301
 Transform:
   m_ObjectHideFlags: 0
