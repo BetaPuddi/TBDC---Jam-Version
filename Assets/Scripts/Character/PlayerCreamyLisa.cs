@@ -8,6 +8,8 @@ namespace Character
         public override void Attack()
         {
             var damageOut = currentHealth * 0.2f;
+            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+            LogManager.instance.InstantiateDamageLog("You", "yourself", damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
             TakeDamage(damageOut);
         }
@@ -23,7 +25,7 @@ namespace Character
             {
                 damageOut = attackStat - EnemyManager.instance.targetEnemy.defenseStat;
             }
-
+            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }
     }

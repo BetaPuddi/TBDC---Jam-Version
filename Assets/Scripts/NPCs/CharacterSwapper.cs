@@ -15,6 +15,8 @@ namespace NPCs
                 var player = thingToSwap.GetComponent<Player>();
                 PlayerManager.instance.SwapPlayer(player);
                 GameManager.instance._gameState = EGameStates.Advance;
+                var text = "You accept the swap.";
+                LogManager.instance.InstantiateTextLog(text);
             }
 
         }
@@ -24,14 +26,21 @@ namespace NPCs
             throw new System.NotImplementedException();
         }
 
-        public override void InitialiseNPC()
-        {
-            NewSwapTarget();
-        }
+        // public override void InitialiseNPC()
+        // {
+        //     NewSwapTarget();
+        // }
 
         public override void NewSwapTarget()
         {
             thingToSwap = swapTargets[Random.Range(0, swapTargets.Length)];
+        }
+
+        public override void Introduction()
+        {
+            var text =
+                $"{npcName} appears and offers to swap your form with {thingToSwap.GetComponent<Player>().playerName}!";
+            LogManager.instance.InstantiateTextLog(text);
         }
     }
 }

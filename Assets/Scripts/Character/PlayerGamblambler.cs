@@ -12,10 +12,14 @@ namespace Character
             switch (targetRoll)
             {
                 case 0:
-                    TakeDamage(damageOut - defenseStat);
+                    damageOut -= defenseStat;
+                    LogManager.instance.InstantiateDamageLog(playerName, "itself", damageOut);
+                    TakeDamage(damageOut);
                     break;
                 case 1:
-                    EnemyManager.instance.targetEnemy.TakeDamage(damageOut - EnemyManager.instance.targetEnemy.defenseStat);
+                    damageOut -= EnemyManager.instance.targetEnemy.defenseStat;
+                    LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+                    EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
                     break;
             }
         }
@@ -27,10 +31,14 @@ namespace Character
             switch (targetRoll)
             {
                 case 0:
-                    Heal(healOut - attackStat);
+                    healOut -= attackStat;
+                    LogManager.instance.InstantiateHealLog(playerName, "itself", healOut);
+                    Heal(healOut);
                     break;
                 case 1:
-                    EnemyManager.instance.targetEnemy.Heal(healOut - EnemyManager.instance.targetEnemy.attackStat);
+                    healOut -= EnemyManager.instance.targetEnemy.attackStat;
+                    LogManager.instance.InstantiateHealLog(playerName, EnemyManager.instance.targetEnemy.enemyName, healOut);
+                    EnemyManager.instance.targetEnemy.Heal(healOut);
                     break;
             }
         }

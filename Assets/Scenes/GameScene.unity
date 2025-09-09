@@ -7854,18 +7854,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102391645}
-        m_TargetAssemblyTypeName: LogManager, Assembly-CSharp
-        m_MethodName: InstantiateLog
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: BleeBloo
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
         m_MethodName: MainAttack
@@ -8409,7 +8397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Area
+  m_text: The path forward is clear.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8846,6 +8834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2f9eb498f146b5ab70b20e84650f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Smoke Bomb
+  itemUseText: The Smoke Bomb allows you to escape.
 --- !u!1 &1600782228
 GameObject:
   m_ObjectHideFlags: 0
@@ -9484,6 +9474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5464bf6f8f894ac4b1dec91fdf485d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Power Potion
+  itemUseText: The Power Potion increases your Attack by 10.
 --- !u!1 &1791135750
 GameObject:
   m_ObjectHideFlags: 0
@@ -9800,6 +9792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f55b32f45c2466bb0549df293af3d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Healing Potion
+  itemUseText: The Healing Potion heals you to full health.
 --- !u!1 &1875085267
 GameObject:
   m_ObjectHideFlags: 0
@@ -10077,7 +10071,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
@@ -10177,6 +10171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a8023cf8bc45a28f8dafbc41939b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Defense Potion
+  itemUseText: The Defense Potion increases your MaxHealth by 50 and your Defense
+    by 5.
 --- !u!1 &1949197589
 GameObject:
   m_ObjectHideFlags: 0
@@ -10899,6 +10896,9 @@ MonoBehaviour:
   mainMenu: {fileID: 945515815}
   gameOverMenu: {fileID: 902460094}
   winMenu: {fileID: 142828777}
+  introText: You wake up at the end of a long dark corridor. The only source of light
+    is a lit torch on a wall nearby. You get up and grab the torch. There is only
+    one way to go.
 --- !u!4 &2036208301
 Transform:
   m_ObjectHideFlags: 0
@@ -11147,7 +11147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 82843368456742439, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 82843368456742439, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_AnchorMin.x
@@ -11155,11 +11155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 82843368456742439, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 82843368456742439, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 579.26
       objectReference: {fileID: 0}
     - target: {fileID: 82843368456742439, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_SizeDelta.y
@@ -11199,7 +11199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 82843368456742439, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -51.6467
       objectReference: {fileID: 0}
     - target: {fileID: 82843368456742439, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11217,9 +11217,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogEntry
       objectReference: {fileID: 0}
+    - target: {fileID: 5264747056468432720, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7645684567579313414, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 51.35
       objectReference: {fileID: 0}
     - target: {fileID: 7645684567579313414, guid: ab9646cb05179f044afae22e0416ed29, type: 3}
       propertyPath: m_LocalPosition.y

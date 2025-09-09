@@ -61,7 +61,6 @@ namespace Managers
         {
             _playerAttack = player.Attack;
             _playerUtility = player.UtilitySkill_01;
-
             _takeDamage = player.TakeDamage;
             _heal = player.Heal;
         }
@@ -81,12 +80,13 @@ namespace Managers
             if (player.itemUses > 0)
             {
                 print("Player skill 02");
+                LogManager.instance.InstantiateTextLog(currentItem.itemUseText);
                 currentItem.UseItem();
                 player.itemUses--;
             }
             else
             {
-                print("No uses remaining");
+                LogManager.instance.InstantiateTextLog("No uses remaining.");
             }
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }

@@ -8,7 +8,9 @@ namespace Character
         public override void Attack()
         {
             print("Groblin attack!");
-            EnemyManager.instance.targetEnemy.TakeDamage(attackStat - Random.Range(-3, 4));
+            var damageOut = attackStat - Random.Range(-3, 4);
+            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+            EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }
 
         public override void UtilitySkill_01()

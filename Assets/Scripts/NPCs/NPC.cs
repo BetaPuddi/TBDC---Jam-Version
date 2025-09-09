@@ -15,8 +15,11 @@ namespace NPCs
         public virtual void InitialiseNPC()
         {
             NewSwapTarget();
+            Introduction();
         }
 
         public abstract void NewSwapTarget();
+
+        public abstract void Introduction();
     }
 }

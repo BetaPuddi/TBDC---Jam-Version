@@ -8,15 +8,17 @@ namespace Enemies
         public override void Attack()
         {
             print("Skeleton Attack");
-            var attackDamage = 2 + Mathf.Clamp((attackStat - PlayerManager.instance.player.defenseStat), 0, Mathf.Infinity);
-            PlayerManager.instance.PlayerTakeDamage(attackDamage);
+            var damageOut = 2 + Mathf.Clamp((attackStat - PlayerManager.instance.player.defenseStat), 0, Mathf.Infinity);
+            PlayerManager.instance.PlayerTakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
         }
 
         public override void Skill_01()
         {
             print("Skeleton Skill 01");
-            var skill01Damage = attackStat / 3;
-            PlayerManager.instance.PlayerTakeDamage(skill01Damage);
+            var damageOut = attackStat / 3;
+            PlayerManager.instance.PlayerTakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
         }
 
         public override void Skill_02()

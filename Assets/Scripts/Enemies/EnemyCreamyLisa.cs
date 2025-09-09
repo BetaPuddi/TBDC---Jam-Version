@@ -10,6 +10,8 @@ namespace Enemies
             var damageOut = currentHealth * 0.2f;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
             TakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
+            LogManager.instance.InstantiateDamageLog(enemyName, "itself", damageOut);
         }
 
         public override void Skill_01()
@@ -23,8 +25,8 @@ namespace Enemies
             {
                 damageOut = attackStat - PlayerManager.instance.player.defenseStat;
             }
-
             PlayerManager.instance.PlayerTakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
         }
     }
 }
