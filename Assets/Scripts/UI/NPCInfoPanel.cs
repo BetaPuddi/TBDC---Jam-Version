@@ -2,12 +2,14 @@ using System;
 using Managers;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class NPCInfoPanel : MonoBehaviour
 {
     public static NPCInfoPanel instance;
 
     public TextMeshProUGUI npcName;
+    public Image npcIcon;
 
     private void OnEnable()
     {
@@ -20,5 +22,6 @@ public class NPCInfoPanel : MonoBehaviour
     public void UpdateNPCInfo()
     {
         npcName.text = NPCManager.instance.currentNpc.npcName;
+        npcIcon.sprite = NPCManager.instance.currentNpc.icon;
     }
 }

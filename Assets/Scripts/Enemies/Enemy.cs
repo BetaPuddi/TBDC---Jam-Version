@@ -3,6 +3,7 @@ using Enums;
 using Managers;
 using UI;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Enemies
@@ -14,6 +15,7 @@ namespace Enemies
         public int maxHealth;
         public int attackStat;
         public int defenseStat;
+        public Sprite enemyIcon;
 
         private void Awake()
         {

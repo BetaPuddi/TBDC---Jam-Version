@@ -22,6 +22,8 @@ namespace Managers
             var newLogPrefab = Instantiate(logPrefab, logPanel.transform);
             var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
             newLogEntry.SetLogText(logText);
+            newLogEntry.logBackground.color = Color.cyan;
+            newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r, newLogEntry.logBackground.color.g,  newLogEntry.logBackground.color.b, 0.1215686f);
         }
 
         public void InstantiateDamageLog(string attacker, string defender, float damage)
@@ -30,6 +32,8 @@ namespace Managers
             var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
             var text = $"{attacker} hits {defender} for {damage} damage!";
             newLogEntry.SetLogText(text);
+            newLogEntry.logBackground.color = Color.red;
+            newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r, newLogEntry.logBackground.color.g,  newLogEntry.logBackground.color.b, 0.1215686f);
         }
 
         public void InstantiateHealLog(string user, string target, float heal)
@@ -38,6 +42,8 @@ namespace Managers
             var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
             var text = $"{user} heals {target} for {heal}!";
             newLogEntry.SetLogText(text);
+            newLogEntry.logBackground.color = Color.green;
+            newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r, newLogEntry.logBackground.color.g,  newLogEntry.logBackground.color.b, 0.1215686f);
         }
     }
 }
