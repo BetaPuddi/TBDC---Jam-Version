@@ -1963,6 +1963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcName: {fileID: 895030093}
+  npcIcon: {fileID: 1057392340}
 --- !u!1 &435097726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4266,9 +4267,9 @@ RectTransform:
   - {fileID: 445636675}
   m_Father: {fileID: 5347718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.6392, y: -146.4691}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782640126
@@ -4633,6 +4634,7 @@ MonoBehaviour:
   - {fileID: 1597229648}
   thingToSwap: {fileID: 0}
   npcName: Item Swapper
+  icon: {fileID: 21300000, guid: 9a3b49ff763baff43aaf5d84d8598a7c, type: 3}
 --- !u!4 &862938010
 Transform:
   m_ObjectHideFlags: 0
@@ -5119,9 +5121,9 @@ RectTransform:
   - {fileID: 696553489}
   m_Father: {fileID: 5347718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.6392, y: -55.4897}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916651809
@@ -5285,7 +5287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &945515816
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6741,6 +6743,7 @@ MonoBehaviour:
   - {fileID: 1521300170}
   thingToSwap: {fileID: 0}
   npcName: Character Swapper
+  icon: {fileID: 21300000, guid: c9abf8bf5eb92be44a9045342caab590, type: 3}
 --- !u!1 &1256418058
 GameObject:
   m_ObjectHideFlags: 0

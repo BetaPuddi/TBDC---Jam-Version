@@ -7,6 +7,7 @@ namespace NPCs
         public GameObject[] swapTargets;
         public GameObject thingToSwap;
         public string npcName;
+        public Sprite icon;
 
         public abstract void Swap();
 
