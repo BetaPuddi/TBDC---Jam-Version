@@ -3,6 +3,7 @@ using Enums;
 using Managers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -15,6 +16,7 @@ namespace UI
         public TextMeshProUGUI enemyHealthText;
         public TextMeshProUGUI enemyATKText;
         public TextMeshProUGUI enemyDEFText;
+        public Image icon;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         private void OnEnable()
@@ -34,6 +36,7 @@ namespace UI
                 enemyHealthText.text = EnemyManager.instance.targetEnemy.currentHealth.ToString();
                 enemyATKText.text = EnemyManager.instance.targetEnemy.attackStat.ToString();
                 enemyDEFText.text = EnemyManager.instance.targetEnemy.defenseStat.ToString();
+                icon.sprite = EnemyManager.instance.targetEnemy.enemyIcon;
             }
             else
             {
