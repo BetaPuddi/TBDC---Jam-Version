@@ -14,6 +14,11 @@ namespace Managers
         public GameObject npcInfoPanel;
         public GameObject areaInfoPanel;
 
+        public GameObject combatActionSet;
+        public GameObject npcActionSet;
+        public GameObject areaActionSet;
+        public GameObject exitActionSet;
+
         private void Awake()
         {
             if (instance == null)
@@ -30,16 +35,19 @@ namespace Managers
                     enemyInfoPanel.SetActive(true);
                     npcInfoPanel.SetActive(false);
                     areaInfoPanel.SetActive(false);
+                    ChangeActionSet();
                     break;
                 case EGameStates.Advance:
                     areaInfoPanel.SetActive(true);
                     npcInfoPanel.SetActive(false);
                     enemyInfoPanel.SetActive(false);
+                    ChangeActionSet();
                     break;
                 case EGameStates.NPC:
                     npcInfoPanel.SetActive(true);
                     areaInfoPanel.SetActive(false);
                     enemyInfoPanel.SetActive(false);
+                    ChangeActionSet();
                     break;
                 case EGameStates.MainMenu:
                     playerInfoPanel.SetActive(false);
@@ -61,6 +69,7 @@ namespace Managers
                     enemyInfoPanel.SetActive(false);
                     break;
                 case EGameStates.Exit:
+                    ChangeActionSet();
                     break;
             }
         }
@@ -68,6 +77,39 @@ namespace Managers
         public void ToggleUI()
         {
             uiCanvas.SetActive(!uiCanvas.activeSelf);
+        }
+
+        public void ChangeActionSet()
+        {
+            switch (GameManager.instance._gameState)
+            {
+                case EGameStates.Combat:
+                    combatActionSet.SetActive(true);
+                    npcActionSet.SetActive(false);
+                    areaActionSet.SetActive(false);
+                    exitActionSet.SetActive(false);
+                    break;
+                case EGameStates.NPC:
+                    combatActionSet.SetActive(false);
+                    npcActionSet.SetActive(true);
+                    areaActionSet.SetActive(false);
+                    exitActionSet.SetActive(false);
+                    break;
+                case EGameStates.Advance:
+                    combatActionSet.SetActive(false);
+                    npcActionSet.SetActive(false);
+                    areaActionSet.SetActive(true);
+                    exitActionSet.SetActive(false);
+                    break;
+                case EGameStates.Exit:
+                    combatActionSet.SetActive(false);
+                    npcActionSet.SetActive(false);
+                    areaActionSet.SetActive(false);
+                    exitActionSet.SetActive(true);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 }
