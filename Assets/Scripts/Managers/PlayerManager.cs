@@ -1,5 +1,6 @@
 using System;
 using Character;
+using Enums;
 using Items;
 using UI;
 using UnityEngine;
@@ -45,16 +46,22 @@ namespace Managers
 
         public void SwapPlayer(Player newPlayer)
         {
-            player = newPlayer;
-            UpdateMainPlayer();
-            PlayerInfoPanel.instance.UpdatePlayerInfo();
+            if (GameManager.instance._gameState == EGameStates.NPC)
+            {
+                player = newPlayer;
+                UpdateMainPlayer();
+                PlayerInfoPanel.instance.UpdatePlayerInfo();
+            }
         }
 
         public void SwapItem(Item newItem)
         {
-            currentItem = newItem;
-            player.itemUses = 2;
-            PlayerInfoPanel.instance.UpdatePlayerInfo();
+            if (GameManager.instance._gameState == EGameStates.NPC)
+            {
+                currentItem = newItem;
+                player.itemUses = 2;
+                PlayerInfoPanel.instance.UpdatePlayerInfo();
+            }
         }
 
         public void UpdateMainPlayer()
@@ -67,28 +74,37 @@ namespace Managers
 
         public void MainAttack()
         {
-            _playerAttack();
+            if (GameManager.instance._gameState == EGameStates.Combat)
+            {
+                _playerAttack();
+            }
         }
 
         public void MainUtility()
         {
-            _playerUtility();
+            if (GameManager.instance._gameState == EGameStates.Combat)
+            {
+                _playerUtility();
+            }
         }
 
         public void Item()
         {
-            if (player.itemUses > 0)
+            if (GameManager.instance._gameState == EGameStates.Combat)
             {
-                print("Player skill 02");
-                LogManager.instance.InstantiateTextLog(currentItem.itemUseText);
-                currentItem.UseItem();
-                player.itemUses--;
+                if (player.itemUses > 0)
+                {
+                    print("Player skill 02");
+                    LogManager.instance.InstantiateTextLog(currentItem.itemUseText);
+                    currentItem.UseItem();
+                    player.itemUses--;
+                }
+                else
+                {
+                    LogManager.instance.InstantiateTextLog("No uses remaining.");
+                }
+                PlayerInfoPanel.instance.UpdatePlayerInfo();
             }
-            else
-            {
-                LogManager.instance.InstantiateTextLog("No uses remaining.");
-            }
-            PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void PlayerTakeDamage(float damage)
