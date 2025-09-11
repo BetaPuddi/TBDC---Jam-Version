@@ -97,5 +97,13 @@ namespace Encounters
                 GameManager.instance.UpdateGameState(7);
             }
         }
+
+        public void SkipNPC()
+        {
+            if (GameManager.instance._gameState == EGameStates.NPC)
+            {
+                GameManager.instance.UpdateGameState(3);
+            }
+        }
     }
 }
