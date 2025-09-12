@@ -1,6 +1,7 @@
 using System;
 using Enums;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Managers
 {
@@ -19,12 +20,15 @@ namespace Managers
         public GameObject areaActionSet;
         public GameObject exitActionSet;
 
+        public AudioSource audioSource;
+
         private void Awake()
         {
             if (instance == null)
             {
                 instance = this;
             }
+            audioSource = GetComponent<AudioSource>();
         }
 
         public void ToggleInfoUI()
@@ -110,6 +114,12 @@ namespace Managers
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        public void PlayButtonSound()
+        {
+            audioSource.pitch = Random.Range(0.8f, 1.2f);
+            audioSource.Play();
         }
     }
 }
