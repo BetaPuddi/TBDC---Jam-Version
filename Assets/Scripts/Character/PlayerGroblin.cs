@@ -16,6 +16,9 @@ namespace Character
         public override void UtilitySkill_01()
         {
             print("Groblin utility skill");
+            var healOut = defenseStat - Random.Range(-3, 4);
+            LogManager.instance.InstantiateHealLog(playerName, "itself", healOut);
+            PlayerManager.instance.PlayerHeal(healOut);
         }
 
         public override void ItemSkill_01()

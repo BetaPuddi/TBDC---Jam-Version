@@ -7,17 +7,20 @@ namespace Enemies
     {
         public override void Attack()
         {
-            var damageOut = attackStat + PlayerManager.instance.player.attackStat;
+            float damageOut = attackStat + PlayerManager.instance.player.attackStat;
             var targetRoll = Random.Range(0, 2);
             switch (targetRoll)
             {
                 case 0:
-                    damageOut -= defenseStat;
+                    print(damageOut);
+                    damageOut *= (100 - defenseStat) / 100;
+                    print(damageOut);
                     TakeDamage(damageOut);
                     LogManager.instance.InstantiateDamageLog(enemyName, "itself", damageOut);
                     break;
                 case 1:
-                    damageOut -= PlayerManager.instance.player.defenseStat;
+                    damageOut *= (100 - PlayerManager.instance.player.defenseStat) / 100;
+                    print(damageOut);
                     PlayerManager.instance.PlayerTakeDamage(damageOut);
                     LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
                     break;

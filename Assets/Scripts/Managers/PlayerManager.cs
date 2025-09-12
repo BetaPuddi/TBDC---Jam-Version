@@ -51,6 +51,7 @@ namespace Managers
                 player = newPlayer;
                 UpdateMainPlayer();
                 PlayerInfoPanel.instance.UpdatePlayerInfo();
+                GameManager.instance.UpdateGameState(3);
             }
         }
 
@@ -61,6 +62,7 @@ namespace Managers
                 currentItem = newItem;
                 player.itemUses = 2;
                 PlayerInfoPanel.instance.UpdatePlayerInfo();
+                GameManager.instance.UpdateGameState(3);
             }
         }
 

@@ -7,7 +7,7 @@ namespace Enemies
     {
         public override void Attack()
         {
-            var damageOut = attackStat - PlayerManager.instance.player.defenseStat * 1.5f;
+            var damageOut = attackStat * ((100f - PlayerManager.instance.player.defenseStat) / 100) * 1.5f;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
         }

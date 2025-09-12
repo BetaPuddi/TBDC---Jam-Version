@@ -8,7 +8,7 @@ namespace Enemies
     {
         public override void Attack()
         {
-            var damageOut = (currentHealth - PlayerManager.instance.player.defenseStat) * 0.5f;
+            var damageOut = currentHealth * (100 - PlayerManager.instance.player.defenseStat) / 100 * 0.2f;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
         }
@@ -16,7 +16,7 @@ namespace Enemies
         public override void Skill_01()
         {
             var missingHealth = maxHealth - currentHealth;
-            var damageOut = missingHealth - PlayerManager.instance.player.defenseStat;
+            var damageOut = missingHealth * (100 - PlayerManager.instance.player.defenseStat) / 100 * 0.1f;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
             defenseStat -= 2;

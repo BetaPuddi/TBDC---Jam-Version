@@ -12,12 +12,12 @@ namespace Character
             switch (targetRoll)
             {
                 case 0:
-                    damageOut -= defenseStat;
+                    damageOut *= (100 - defenseStat) / 100;
                     LogManager.instance.InstantiateDamageLog(playerName, "itself", damageOut);
                     TakeDamage(damageOut);
                     break;
                 case 1:
-                    damageOut -= EnemyManager.instance.targetEnemy.defenseStat;
+                    damageOut *= (100 - EnemyManager.instance.targetEnemy.defenseStat) / 100;
                     LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
                     EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
                     break;

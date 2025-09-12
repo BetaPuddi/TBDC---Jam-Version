@@ -1385,10 +1385,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Creamy Lisa
   currentHealth: 0
-  maxHealth: 0
-  attackStat: 0
-  defenseStat: 0
-  itemUses: 0
+  maxHealth: 350
+  attackStat: 15
+  defenseStat: 20
+  itemUses: 2
 --- !u!1 &174873364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,9 +2559,9 @@ MonoBehaviour:
   playerName: Skelebob
   currentHealth: 0
   maxHealth: 300
-  attackStat: 6
-  defenseStat: 2
-  itemUses: 0
+  attackStat: 16
+  defenseStat: 12
+  itemUses: 2
 --- !u!1 &305920797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3081,9 +3081,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Gamblambler
   currentHealth: 0
-  maxHealth: 0
-  attackStat: 0
-  defenseStat: 0
+  maxHealth: 700
+  attackStat: 17
+  defenseStat: 17
   enemyIcon: {fileID: 21300000, guid: e3040541947130c4fba4b0ad98c4ab71, type: 3}
 --- !u!1 &362698647
 GameObject:
@@ -4133,8 +4133,8 @@ MonoBehaviour:
   enemyName: Bat
   currentHealth: 18
   maxHealth: 180
-  attackStat: 5
-  defenseStat: 2
+  attackStat: 15
+  defenseStat: 6
   enemyIcon: {fileID: 21300000, guid: bb2b0d53ad2367f41950f14c0bdfb277, type: 3}
 --- !u!1 &445636674
 GameObject:
@@ -4737,9 +4737,9 @@ MonoBehaviour:
   playerName: Haunted Tofu
   currentHealth: 0
   maxHealth: 400
-  attackStat: 2
-  defenseStat: 15
-  itemUses: 0
+  attackStat: 6
+  defenseStat: 20
+  itemUses: 2
 --- !u!1 &577035695
 GameObject:
   m_ObjectHideFlags: 0
@@ -4787,8 +4787,8 @@ MonoBehaviour:
   playerName: Groblin
   currentHealth: 30
   maxHealth: 300
-  attackStat: 250
-  defenseStat: 15
+  attackStat: 18
+  defenseStat: 6
   itemUses: 2
 --- !u!1 &584139027
 GameObject:
@@ -6818,8 +6818,8 @@ MonoBehaviour:
   enemyName: Haunted Tofu
   currentHealth: 40
   maxHealth: 400
-  attackStat: 2
-  defenseStat: 15
+  attackStat: 6
+  defenseStat: 20
   enemyIcon: {fileID: 21300000, guid: d6006dd9fe34e444f8bcc7b322958664, type: 3}
 --- !u!1 &773487508
 GameObject:
@@ -6867,10 +6867,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Rotten Chicken Leg
   currentHealth: 0
-  maxHealth: 0
-  attackStat: 0
-  defenseStat: 0
-  itemUses: 0
+  maxHealth: 150
+  attackStat: 5
+  defenseStat: 10
+  itemUses: 2
 --- !u!1 &777279123
 GameObject:
   m_ObjectHideFlags: 0
@@ -9267,8 +9267,8 @@ MonoBehaviour:
   enemyName: Skelebob
   currentHealth: 30
   maxHealth: 300
-  attackStat: 6
-  defenseStat: 2
+  attackStat: 16
+  defenseStat: 12
   enemyIcon: {fileID: 21300000, guid: 0a400113755b5bb44b745c9c6d3b1902, type: 3}
 --- !u!1 &934135869
 GameObject:
@@ -10306,9 +10306,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Creamy Lisa
   currentHealth: 0
-  maxHealth: 0
-  attackStat: 0
-  defenseStat: 0
+  maxHealth: 350
+  attackStat: 15
+  defenseStat: 20
   enemyIcon: {fileID: 21300000, guid: 776f2974b77074a48be237693f9ad920, type: 3}
 --- !u!1 &1036790088
 GameObject:
@@ -12263,7 +12263,7 @@ MonoBehaviour:
   maxHealth: 360
   attackStat: 12
   defenseStat: 8
-  itemUses: 0
+  itemUses: 2
 --- !u!1 &1204345271
 GameObject:
   m_ObjectHideFlags: 0
@@ -15321,7 +15321,7 @@ MonoBehaviour:
   maxHealth: 150
   attackStat: 2
   defenseStat: 13
-  itemUses: 0
+  itemUses: 2
 --- !u!4 &1521300172
 Transform:
   m_ObjectHideFlags: 0
@@ -15565,9 +15565,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Rotten Chicken Leg
   currentHealth: 0
-  maxHealth: 0
-  attackStat: 0
-  defenseStat: 0
+  maxHealth: 150
+  attackStat: 5
+  defenseStat: 10
   enemyIcon: {fileID: 21300000, guid: 24a86de5110db4449a21666f2ef786e6, type: 3}
 --- !u!1 &1601774584
 GameObject:
@@ -15746,12 +15746,12 @@ Transform:
   - {fileID: 577035697}
   - {fileID: 303250523}
   - {fileID: 1766694459}
-  - {fileID: 159695062}
   - {fileID: 1203208788}
+  - {fileID: 1521300172}
   - {fileID: 1958728462}
+  - {fileID: 159695062}
   - {fileID: 567815738}
   - {fileID: 773487509}
-  - {fileID: 1521300172}
   - {fileID: 187072859}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16665,9 +16665,9 @@ MonoBehaviour:
   playerName: Batface
   currentHealth: 0
   maxHealth: 180
-  attackStat: 5
-  defenseStat: 2
-  itemUses: 0
+  attackStat: 15
+  defenseStat: 6
+  itemUses: 2
 --- !u!1 &1785886384
 GameObject:
   m_ObjectHideFlags: 0
@@ -18222,10 +18222,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Gamblambler
   currentHealth: 0
-  maxHealth: 0
-  attackStat: 0
-  defenseStat: 0
-  itemUses: 0
+  maxHealth: 700
+  attackStat: 17
+  defenseStat: 17
+  itemUses: 2
 --- !u!1 &1966593356
 GameObject:
   m_ObjectHideFlags: 0
