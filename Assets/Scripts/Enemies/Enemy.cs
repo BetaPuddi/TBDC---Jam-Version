@@ -13,8 +13,8 @@ namespace Enemies
         public string enemyName;
         public int currentHealth;
         public int maxHealth;
-        public int attackStat;
-        public int defenseStat;
+        public float attackStat;
+        public float defenseStat;
         public Sprite enemyIcon;
 
         private void Awake()

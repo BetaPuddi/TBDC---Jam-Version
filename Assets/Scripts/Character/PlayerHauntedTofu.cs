@@ -8,7 +8,7 @@ namespace Character
     {
         public override void Attack()
         {
-            var damageOut = (currentHealth - EnemyManager.instance.targetEnemy.defenseStat) * 0.5f;
+            var damageOut = currentHealth * (100 - EnemyManager.instance.targetEnemy.defenseStat) / 100 * 0.5f;
             LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }
@@ -16,7 +16,7 @@ namespace Character
         public override void UtilitySkill_01()
         {
             var missingHealth = maxHealth - currentHealth;
-            var damageOut = missingHealth - EnemyManager.instance.targetEnemy.defenseStat;
+            var damageOut = missingHealth * (100 - EnemyManager.instance.targetEnemy.defenseStat) / 100;
             LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
             LogManager.instance.InstantiateTextLog("You lose 2 Defense!");
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);

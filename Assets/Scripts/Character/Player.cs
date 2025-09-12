@@ -11,8 +11,8 @@ namespace Character
         public string playerName;
         public int currentHealth;
         public int maxHealth;
-        public int attackStat;
-        public int defenseStat;
+        public float attackStat;
+        public float defenseStat;
         public int itemUses;
 
         private void Awake()

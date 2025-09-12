@@ -16,7 +16,7 @@ namespace Character
 
         public override void UtilitySkill_01()
         {
-            int damageOut;
+            float damageOut;
             if (currentHealth < maxHealth * 0.2f)
             {
                 damageOut = attackStat * 2;

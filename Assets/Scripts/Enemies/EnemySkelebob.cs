@@ -8,7 +8,7 @@ namespace Enemies
         public override void Attack()
         {
             print("Skeleton Attack");
-            var damageOut = 2 + Mathf.Clamp((attackStat - PlayerManager.instance.player.defenseStat), 0, Mathf.Infinity);
+            var damageOut = 2 + Mathf.Clamp(attackStat * (100f - PlayerManager.instance.player.defenseStat) / 100, 0, Mathf.Infinity);
             PlayerManager.instance.PlayerTakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
         }

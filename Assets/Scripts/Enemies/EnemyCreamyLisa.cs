@@ -16,14 +16,14 @@ namespace Enemies
 
         public override void Skill_01()
         {
-            int damageOut;
+            float damageOut;
             if (currentHealth < maxHealth * 0.2f)
             {
                 damageOut = attackStat * 2;
             }
             else
             {
-                damageOut = attackStat - PlayerManager.instance.player.defenseStat;
+                damageOut = attackStat * (100 - PlayerManager.instance.player.defenseStat) / 100;
             }
             PlayerManager.instance.PlayerTakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
