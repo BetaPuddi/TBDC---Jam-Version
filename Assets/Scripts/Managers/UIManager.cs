@@ -14,6 +14,7 @@ namespace Managers
         public GameObject playerInfoPanel;
         public GameObject npcInfoPanel;
         public GameObject areaInfoPanel;
+        public GameObject settingsPanel;
 
         public GameObject combatActionSet;
         public GameObject npcActionSet;
@@ -120,6 +121,11 @@ namespace Managers
         {
             audioSource.pitch = Random.Range(0.8f, 1.2f);
             audioSource.Play();
+        }
+
+        public void ToggleSettingsMenu()
+        {
+            settingsPanel.SetActive(!settingsPanel.activeSelf);
         }
     }
 }
