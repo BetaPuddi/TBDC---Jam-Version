@@ -3892,7 +3892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Gamblambler
   currentHealth: 0
-  maxHealth: 700
+  maxHealth: 388
   attackStat: 17
   defenseStat: 17
   enemyIcon: {fileID: 21300000, guid: e3040541947130c4fba4b0ad98c4ab71, type: 3}
@@ -7179,9 +7179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Lemon Slime
   currentHealth: 15
-  maxHealth: 150
+  maxHealth: 50
   attackStat: 2
-  defenseStat: 13
+  defenseStat: 20
   enemyIcon: {fileID: 21300000, guid: e263d621ac66bd642ad61a555a190540, type: 3}
 --- !u!1 &696553488
 GameObject:
@@ -8234,7 +8234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Haunted Tofu
   currentHealth: 40
-  maxHealth: 400
+  maxHealth: 300
   attackStat: 6
   defenseStat: 20
   enemyIcon: {fileID: 21300000, guid: d6006dd9fe34e444f8bcc7b322958664, type: 3}
@@ -10716,7 +10716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: An imp and also a cat
   currentHealth: 36
-  maxHealth: 360
+  maxHealth: 320
   attackStat: 12
   defenseStat: 8
   enemyIcon: {fileID: 21300000, guid: e247422111c39ce4e8ffc6c03f81cd8e, type: 3}
@@ -11335,7 +11335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Skelebob
   currentHealth: 30
-  maxHealth: 300
+  maxHealth: 250
   attackStat: 16
   defenseStat: 12
   enemyIcon: {fileID: 21300000, guid: 0a400113755b5bb44b745c9c6d3b1902, type: 3}
@@ -18233,7 +18233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Rotten Chicken Leg
   currentHealth: 0
-  maxHealth: 150
+  maxHealth: 75
   attackStat: 5
   defenseStat: 10
   enemyIcon: {fileID: 21300000, guid: 24a86de5110db4449a21666f2ef786e6, type: 3}
