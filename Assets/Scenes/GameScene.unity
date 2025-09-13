@@ -3224,7 +3224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Skelebob
   currentHealth: 0
-  maxHealth: 300
+  maxHealth: 250
   attackStat: 16
   defenseStat: 12
   itemUses: 2
@@ -5882,7 +5882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Haunted Tofu
   currentHealth: 0
-  maxHealth: 400
+  maxHealth: 300
   attackStat: 6
   defenseStat: 20
   itemUses: 2
@@ -5932,7 +5932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Groblin
   currentHealth: 30
-  maxHealth: 300
+  maxHealth: 250
   attackStat: 18
   defenseStat: 6
   itemUses: 2
@@ -8284,7 +8284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Rotten Chicken Leg
   currentHealth: 0
-  maxHealth: 150
+  maxHealth: 75
   attackStat: 5
   defenseStat: 10
   itemUses: 2
@@ -14502,7 +14502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Imp and also a Cat
   currentHealth: 0
-  maxHealth: 360
+  maxHealth: 320
   attackStat: 12
   defenseStat: 8
   itemUses: 2
@@ -17853,7 +17853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Lemon Slime
   currentHealth: 0
-  maxHealth: 150
+  maxHealth: 50
   attackStat: 2
   defenseStat: 13
   itemUses: 2
@@ -21014,7 +21014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Gamblambler
   currentHealth: 0
-  maxHealth: 700
+  maxHealth: 388
   attackStat: 17
   defenseStat: 17
   itemUses: 2
