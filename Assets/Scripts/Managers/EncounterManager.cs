@@ -76,9 +76,9 @@ namespace Encounters
                 else
                 {
                     exitChanceModifier++;
+                    LogManager.instance.InstantiateTextLog("You advance further into the dungeon.");
                     GameManager.instance.UpdateGameState(Random.Range(1, 3));
                     roomsCleared++;
-                    LogManager.instance.InstantiateTextLog("You advance further into the dungeon.");
                 }
             }
         }
