@@ -102,6 +102,7 @@ namespace Encounters
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
+                LogManager.instance.InstantiateTextLog("You decline the swap.");
                 GameManager.instance.UpdateGameState(3);
             }
         }
