@@ -2682,7 +2682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Utility
+  m_text: Skill 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6fe4203ba1b2d5f469556f68711ad774, type: 2}
   m_sharedMaterial: {fileID: 2315776765945773363, guid: 6fe4203ba1b2d5f469556f68711ad774, type: 2}
@@ -3808,7 +3808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Utility
+  m_text: Skill 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6fe4203ba1b2d5f469556f68711ad774, type: 2}
   m_sharedMaterial: {fileID: 2315776765945773363, guid: 6fe4203ba1b2d5f469556f68711ad774, type: 2}
@@ -5989,7 +5989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Attack
+  m_text: Skill 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6fe4203ba1b2d5f469556f68711ad774, type: 2}
   m_sharedMaterial: {fileID: 2315776765945773363, guid: 6fe4203ba1b2d5f469556f68711ad774, type: 2}
@@ -8864,7 +8864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Attack
+  m_text: Skill 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6fe4203ba1b2d5f469556f68711ad774, type: 2}
   m_sharedMaterial: {fileID: 2315776765945773363, guid: 6fe4203ba1b2d5f469556f68711ad774, type: 2}
