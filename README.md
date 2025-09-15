@@ -1,4 +1,4 @@
-# TBDC
+# Groblin Swapper
 Made for the Turn-Based Dungeon Crawler Jam.
 
 Your goal is to escape the dungeon by clearing encounters. After 10 encounters you have a chance to find the exit, with that chance increasing the more you clear. Along the way you can encounter NPCs that will offer to swap your form (name, stats, and skills) with a randomly chosen enemy, or your item for another. 
